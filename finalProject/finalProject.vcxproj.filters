@@ -18,7 +18,13 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="assembler.h">
+    <ClCompile Include="structures.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="assembler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commandsData.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

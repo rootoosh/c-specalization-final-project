@@ -139,7 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="assembler.h" />
+    <ClCompile Include="assembler.c" />
+    <ClCompile Include="commandsData.h" />
+    <ClCompile Include="structures.h" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>

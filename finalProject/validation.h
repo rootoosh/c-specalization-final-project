@@ -1,5 +1,5 @@
+
 #include <string.h>
-int G_flagError=0;
 
 char * f_checkIsValidLabel(char * row, char * index)
 {
@@ -10,9 +10,11 @@ int f_checkIsValidCommand(char * row)
 {
 
 }
-//fucntion to check the validion of the row
-int f_checkIsValidRow(char* row)
+//fucntion to check the validion of the row, get row, num row for print error with the num
+//and get pointer to string for returning the label
+int f_checkIsValidRow(char* row,int numRow, char** isLabelInRow)
 {
+	int status=0;
 	//hold the place of the ':'
 	char* index;
 	char* label=NULL;

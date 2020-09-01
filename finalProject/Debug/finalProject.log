@@ -1,0 +1,55 @@
+﻿  assembler.c
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(30,2): error C2061: syntax error: identifier 'nodeI'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(31,1): error C2059: syntax error: '}'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(44,2): error C2061: syntax error: identifier 'nodeD'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(45,1): error C2059: syntax error: '}'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(59,2): error C2061: syntax error: identifier 'S_symbol'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(60,1): error C2059: syntax error: '}'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(69,18): error C2143: syntax error: missing '{' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(69,59): error C2065: 'S_nodeInstruction': undeclared identifier
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(69,60): error C2059: syntax error: ')'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(70,18): error C2143: syntax error: missing '{' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(70,59): error C2099: initializer is not a constant
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(72,11): error C2143: syntax error: missing '{' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(72,39): error C2065: 'S_nodeData': undeclared identifier
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(72,40): error C2059: syntax error: ')'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(73,11): error C2143: syntax error: missing '{' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\structures.h(73,40): error C2099: initializer is not a constant
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(9,52): error C2143: syntax error: missing ')' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(9,52): error C2081: 'S_nodeInstruction': name in formal parameter list illegal
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(9,52): error C2143: syntax error: missing '{' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(9,61): error C2059: syntax error: ')'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(10,1): error C2054: expected '(' to follow 'newNode'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(19,52): error C2143: syntax error: missing ')' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(19,52): error C2081: 'S_nodeInstruction': name in formal parameter list illegal
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(19,52): error C2143: syntax error: missing '{' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(19,61): error C2059: syntax error: ')'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(20,1): error C2054: expected '(' to follow 'newNode'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(29,54): error C2143: syntax error: missing ')' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(29,54): error C2081: 'S_nodeInstruction': name in formal parameter list illegal
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(29,54): error C2143: syntax error: missing '{' before '*'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(29,63): error C2059: syntax error: ')'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(30,1): error C2054: expected '(' to follow 'newNode'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(61,19): error C2065: 'S_nodeInstruction': undeclared identifier
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(61,29): error C2297: '*': illegal, right operand has type 'int *'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(61,49): error C2065: 'S_nodeInstruction': undeclared identifier
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(61,50): error C2059: syntax error: ')'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(63,11): error C2223: left of '->next' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(64,22): error C2223: left of '->next' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(68,11): error C2223: left of '->adress' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(76,12): error C2223: left of '->label' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(87,19): error C2223: left of '->command' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(87,34): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(87,34): warning C4024: 'strncpy': different types for formal and actual parameter 2
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(87,34): error C2198: 'strncpy': too few arguments for call
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(91,11): error C2223: left of '->firstOperand' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(92,11): error C2223: left of '->secondOperand' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(95,59): error C2223: left of '->command' must point to struct/union
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(95,66): error C2198: 'f_getNumOperandsByCommandName': too few arguments for call
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(98,20): warning C4013: 'f_instrct1operand' undefined; assuming extern returning int
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(102,20): warning C4013: 'f_instrct2operand' undefined; assuming extern returning int
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(87,2): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\assembler.c(144,22): warning C4013: 'getline' undefined; assuming extern returning int
+  main.c
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\main.c(17,12): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
