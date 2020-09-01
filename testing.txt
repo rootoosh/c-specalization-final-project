@@ -1,0 +1,149 @@
+;all here are not valid input
+
+;name of register 
+mov R1,r2
+
+; name of register r0 till r7
+mov r8,r0
+
+; cannot do placement to number
+mov r2,3
+
+;only integers numbres can be use
+mov #4.5 ,r1
+
+; sould be , 
+add #r1 2
+
+; should be immidiate address
+sub 4, r1
+
+; not valid name of instruction
+increase r1
+
+; no match between instrcution and num of operands
+prn r1, labelD
+
+; mov cannot be use with * - * use only with jmp/jsr/bnz
+mov *labelI
+
+; name of label should be near the '@' with no space
+mov @ labelD,r1
+
+; the list of numbers shuold not start or end with ,
+labelI: .data ,-7,
+
+; .data mean there is only numeric value here
+labelI1: .data "abdcd"
+
+; should be , between the numbers
+labelI2: .data 7 4
+
+; should be : in end of the label's name
+labelI3 .data 4,3
+
+; label name contain only numbers and letters
+Label^of: jsr * labelI1
+
+; the string should be with " "
+.string aa
+
+; it can be error or not!!!:
+.string
+
+; must be dot (.) before the "data" word
+labelI4: data 2
+
+; name of label should start with letter
+.entry 2go
+
+; is should appear as dot and just after the key word without space
+. entry x
+
+; the opernd of jmp cant be Immediate address
+jmp #176
+
+; name of label cant be key word
+div: div 12,2
+
+; the # should be near a number
+mov #r1,r2
+
+; the first operand of the lea command must be a label
+lea r1,r2
+
+; prn sould get register name or label. it'nt print $$- the opernad, it print the content of the operand
+prn $$
+
+; maximum 30 characters of label name
+labelNameIsTooLargeAndShouldBe: mov r1,r2
+
+; maximum number is 32,767 (we have 16 bits as byte)
+labelD: .data 34,999
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; all here are valid input
+
+; no matter what the label of (data or instrucion), label is good operand for jmp
+jmp labelD
+
+; numbres only in 10 based. =8
+.data 08
+
+;
+cmp #77,r0
+
+;
+sub label1,@label2
+
+;
+mov @r1,r0
+
+;
+mov @label, r1
+
+; this is fine the first operand of the lea command must be a label
+lea label, r1
+
+;
+div r1,r2
+
+; that ok. r1 will get the result
+sub #4,r1
+
+;
+inc r2
+
+;
+dec labelD
+
+;
+labelI1: prn labelD
+
+;
+hlt
+
+;
+rts
+
+;
+red r0
+
+;
+labelD: .data 2,3,455
+
+;
+.data -00,+1101
+
+;
+labelD2: .string "afb%"
+
+;
+.entry labelD
+
+;פקודת קפיצה עם * ובלי מה בדיוק ההבדל
+;האם מותר לכתוב .string בלי לכתוב ערכים כלל
+; אם רוצים לקדם את הערך השביעי שבערכים שהצהרנו. האם מותר לכתוב: inc labelD+6
+; אם נכתוב תווית בלי לכתוב כלום מה יקרה
+; איך אפשר לאכוף שתויות לא תיהנה מילים שמורות
