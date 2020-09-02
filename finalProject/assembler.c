@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 #include "structures.h"
 #include "validation.h"
 #include "commandsData.h"
@@ -18,6 +19,7 @@ void f_instrct2operand(char* row, S_nodeInstruction* newNode)
 	כוו'
 	*/
 }
+
 //row point on the char just after the command
 void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 {
@@ -28,7 +30,6 @@ void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 	לדוגמא אופרנד אחד לא יכול להיות מעון ישיר אין לבדוק זאת
 	*/
 }
-
 
 //find # mean Instant residence method
 void f_manageInstandResidence(char* row, S_nodeInstruction* newNode)
@@ -44,12 +45,12 @@ void f_manageInstandResidence(char* row, S_nodeInstruction* newNode)
 	*/
 }
 
-
 //get label and scope and modity the scope of the label in the hash symbols table
 void f_updateScopeLabel(char* label, E_scopeLabel scope)
 {
 
 }
+
 //the function get label and type and insert it to the symbols table
 void f_insertLabel(char* label, E_typeLabel labelType)
 {
@@ -137,23 +138,148 @@ void f_modifyLabel(char* row, E_scopeLabel scope)
 	//send to "updateScopeLabel(char * label,E_scopeLabel scope)"
 }
 
-void f_manageData(char *row,S_nodeData* newNode)
+//initialize DataNode for .data directive
+void f_initializeDataNode(S_nodeData* node, int num)
 {
-	/*
-	לקרא מספרים ממחרוזת שהתקבלה ולהכניס אותם ברשימה כל מספר בצומת ולקדם מונה נתונים 
-	כלומר לקדם dc
 
-	*/
+	node->adress = DC;
+	node->label = NULL;
+	node->binaryCode = 1;
+	// 1&num -Put the number in binary representation
+	node->binaryCode = (node->binaryCode & num);
+	node->type = NULL;
+
 }
 
-void f_manageString(char* row, S_nodeData* newNode)
+//get row which is directive- and manage the data of this row
+void f_manageData(char* row, S_nodeData* node)
+{
+	/*
+	לקרא מספרים ממחרוזת שהתקבלה ולהכניס אותם ברשימה כל מספר בצומת ולקדם מונה נתונים
+	כלומר לקדם dc
+		*/
+		//temp pointer to the row
+	char* ptr;
+	//hold the num from the string
+	int num;
+	//while different from '/0' -this while search number in string
+	while (*row)
+	{
+		//if it is not digit or '+' or '-' continue in the string
+		if ((!isdigit(*row)) && (*row != '-') && (*row != '+'))
+		{
+			row++;
+		}
+		else
+		{ // when find number-convert it from string to integer
+			//and place it in num variable 
+			ptr = row;
+			ptr = strchr(row, ',');
+			//if  find ','
+			if (ptr != NULL)
+			{
+				*ptr = '/0';
+				num = atoi(row);
+				//the new node struct
+				S_nodeData* newNode = (S_nodeData*)malloc(sizeof(S_nodeData));
+				//connect the new node to the llist
+				node->next = newNode;
+				newNode->next = NULL;
+				tailDataList = newNode;
+				//initialize the new node in the S_nodeData struct
+				f_initializeDataNode(newNode, num);
+				//inc the data counter
+				DC++;
+				//inc the ptr to point after the '/0'
+				ptr++;
+				//row point after the '/0' to continue search another number
+				row = ptr;
+			}
+			else
+			{
+				break;
+			}
+		}
+	}
+
+	//for the last number in the data
+	num = atoi(row);
+	//the new node struct
+	S_nodeData* newNode = (S_nodeData*)malloc(sizeof(S_nodeData));
+	//connect the new node to the llist
+	node->next = newNode;
+	newNode->next = NULL;
+	tailDataList = newNode;
+	//initialize the new node in the S_nodeData struct
+	f_initializeDataNode(newNode, num);
+	//inc the data counter
+	DC++;
+}
+
+//initialize DataNode for .string directive
+void f_initializeStringNode(int ch, S_nodeData* node)
+{
+	node->adress = DC;
+	node->binaryCode = 1;
+	//1&ch-Put the assci code of the sign in binary representation
+	node->binaryCode = (node->binaryCode & 1);
+	node->label = NULL;
+	node->type = NULL;
+}
+
+//get row which is directive- and manage the data of this row
+void f_manageString(char* row, S_nodeData* node)
 {
 	/*
 	לקרא תוים ממחרוזת ולהכניס אותם ברשימה כל תו בצומת ולקדם מונה נתונים
 	כלומר לקדם dc
+		*/
+		//row pointer after the word "string" in the directive sentense
+	row += 6;
+	//while there is no sign inc the row pointer until find sign
+	while ((*row) == ' ' || (*row) == '\t')
+	{
+		row++;
+	}
+	//ch- hold the assci code of the first sign in the string
+	int ch = *row;
+	node->binaryCode = 1;
+	//1&ch-Put the assci code of the sign in binary representation
+	node->binaryCode = (node->binaryCode & ch);
+	//inc row to point to the next sign if there is each one
+	row++;
+	//while different from '/0' -this while search sign in string
+	while (*row)
+	{
+		//create new node
+		S_nodeData* newNode = (S_nodeData*)malloc(sizeof(S_nodeData));
+		//connect the new node to the llist
+		node->next = newNode;
+		newNode->next = NULL;
+		tailDataList = newNode;
+		//if after the sign there is no other sign put '\0' and finish
+		if ((*row) == ' ' || (*row) == '\t')
+		{
+			//initialize the new node in the S_nodeData struct
+			f_initializeStringNode(0, newNode);
+			//inc the data counter
+			DC++;
+			break;
+		}
+		else {
+			//ch- hold the assci code of the sign
+			ch = *row;
+			//initialize the new node in the S_nodeData struct
+			f_initializeStringNode(ch, newNode);
+			//inc the data counter
+			DC++;
+			row++;
+		}
 
-	*/
+	}
+
 }
+
 void f_manageDirective(char* row, char* isLabel)
 {
 	//first check if is label here
@@ -212,9 +338,9 @@ void f_manageDirective(char* row, char* isLabel)
 			//note row point to data without '.'
 			f_manageString(row, newNode);
 		}
-		
+
 	}
-	
+
 
 	/*
 	VV   int adress;
@@ -285,7 +411,7 @@ int CountRowsInFile(FILE* inputFile)
 	int count = 0;
 	// Extract characters from file and store in character c
 	for (c = getc(inputFile); c != EOF; c = getc(inputFile))
-	{ 
+	{
 		if (c == '\n') // Increment count if this character is newline
 		{
 			count++;
