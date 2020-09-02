@@ -21,9 +21,9 @@ int main()
 	}
 	//int n=countrows(inputFile)
 	//allocate hashForSymbol(n)
-	//f_assembleFirstPass(inputFile,listData,listInstrucion);
+	//f_assembleFirstPass(inputFile);
 	//f_assenmbleSecondPass(inputFile,listDAta,listInstruction)
-	//f_assemble
+	//f_
 	if (fclose(inputFile) != 0)
 	{
 		perror("could not close the file");
