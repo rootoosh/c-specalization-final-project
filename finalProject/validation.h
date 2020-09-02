@@ -10,8 +10,12 @@ int f_checkIsValidCommand(char * row)
 {
 
 }
+
 //fucntion to check the validion of the row, get row, num row for print error with the num
 //and get pointer to string for returning the label
+//must return label without ':'- put /0 in place of :
+//status =0 mean error. =1 mean is insturcion. =2 mean is directivve
+//שורה ריקה היא לא ולידית כלומר לא חוקית וגם שורת הערה
 int f_checkIsValidRow(char* row,int numRow, char** isLabelInRow)
 {
 	int status=0;
