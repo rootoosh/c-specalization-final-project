@@ -9,6 +9,9 @@
 void f_instrct2operand(char* row, S_nodeInstruction* newNode)
 {
 	/*
+	פונקציה זו אמורה למלא בצומת החדש את השדה אופרנד שני,
+	וכן את השדה קוד בינרי- בביטים הקשורים לאופרנד שני
+
 	צריך להפריד את האופרנדים למחרוזות
 	לשלוח לפונקציות המתיאמות לשיטות המיעון
 	להפוך מספרים ממחרוזות לאינטים ולכתוב קוד אסקי שלהם
@@ -19,6 +22,8 @@ void f_instrct2operand(char* row, S_nodeInstruction* newNode)
 void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 {
 	/*
+	פונקציה זו אמורה למלא בצומת החדש את השדה אופרנד ראשון,
+	וכן את השדה קוד בינרי- בביטים הקשורים לאופרנד ראשון
 	לא לעשות דברים מיותרים רק לפי מה שהגיוני  שיהיה
 	לדוגמא אופרנד אחד לא יכול להיות מעון ישיר אין לבדוק זאת
 	*/
@@ -26,7 +31,7 @@ void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 
 
 //find # mean Instant residence method
-f_manageInstandResidence(char* row, S_nodeInstruction* newNode)
+void f_manageInstandResidence(char* row, S_nodeInstruction* newNode)
 {
 	/*
 	1. לכתוב שיטת מעון בבינראי קוד של הצומת החדש - צריך להשתמש במסכה כדי לכתוב את זה בסיביות המתאימות
@@ -39,10 +44,18 @@ f_manageInstandResidence(char* row, S_nodeInstruction* newNode)
 	*/
 }
 
+
+//get label and scope and modity the scope of the label in the hash symbols table
+void f_updateScopeLabel(char* label, E_scopeLabel scope)
+{
+
+}
 //the function get label and type and insert it to the symbols table
 void f_insertLabel(char* label, E_typeLabel labelType)
 {
 	/*
+
+
 	ליצור מבנה מתאים של תוית, להכניס בו ערכים: שם כתובת לפי הכתובת IC
 	  labelTypeסוג לפי
 	  הסקופ הוא לוקאלי
@@ -66,7 +79,8 @@ void f_manamgeInstruction(char* row, char* isLabel)
 
 	//copy the address to the node istruction struct from IC
 	newNode->adress = IC;
-
+	//inc the instrucion counter
+	IC++;
 	//first check if is label here
 	// if has- send to function:insertlabel
 	if (isLabel != NULL)
@@ -116,19 +130,110 @@ void f_manamgeInstruction(char* row, char* isLabel)
 	VVVVVV nodeI* next;*/
 }
 
-void f_manageData(char* row, char* isLabel)
+void f_modifyLabel(char* row, E_scopeLabel scope)
 {
+	//the row point to the word:entry or:extern
+	//note yoou souhuld find space and after him- the label to midify. cut it and
+	//send to "updateScopeLabel(char * label,E_scopeLabel scope)"
+}
+
+void f_manageData(char *row,S_nodeData* newNode)
+{
+	/*
+	לקרא מספרים ממחרוזת שהתקבלה ולהכניס אותם ברשימה כל מספר בצומת ולקדם מונה נתונים 
+	כלומר לקדם dc
+
+	*/
+}
+
+void f_manageString(char* row, S_nodeData* newNode)
+{
+	/*
+	לקרא תוים ממחרוזת ולהכניס אותם ברשימה כל תו בצומת ולקדם מונה נתונים
+	כלומר לקדם dc
+
+	*/
+}
+void f_manageDirective(char* row, char* isLabel)
+{
+	//first check if is label here
+	// if has- send to function:insertlabel
 	if (isLabel != NULL)
 	{
 		f_insertLabel(isLabel, data);
+		//row point after ther label
+		row += strlen(isLabel) + 1;
 	}
+
+	//ignore the spaces and go to letters- that must represent .data or .string .entry .extern
+	row = strchr(row, '.');
+	row++;
+
+	//extern or entry
+	if (*(row) == 'e')
+	{
+		if ((*(row + 1) == 'x'))
+		{
+			f_modifyLabel(row, external);
+		}
+		// entry
+		else if (*(row + 1) == 'n')
+		{
+			f_modifyLabel(row, entry);
+		}
+	}
+	else
+	{
+		//the new node struct
+		S_nodeData* newNode = (S_nodeData*)malloc(sizeof(S_nodeData));
+		//connect the new node to the llist
+		newNode->next = NULL;
+		tailDataList->next = newNode;
+		tailDataList = newNode;
+
+		//copy the address to the node data struct from DC
+		newNode->adress = DC;
+		//inc the Data counter
+		DC++;
+		//put the label in the node data struct
+		newNode->label = isLabel;
+
+		//data
+		if (*(row) == 'd')
+		{
+			newNode->type = "data";
+			//note row point to data without '.'
+			f_manageData(row, newNode);
+		}
+		//string 
+		else
+		{
+			newNode->type = "string";
+			//note row point to data without '.'
+			f_manageString(row, newNode);
+		}
+		
+	}
+	
+
+	/*
+	VV   int adress;
+	VV  char* label;
+	//.data or .string
+	char* type;
+	//represent the content data in binary
+	//should be node for every piece of data
+	unsigned int binaryCode : 16;
+	nodeD* next
+	*/
+
 
 
 }
 
 //function to read row, check is valid, 
 //put in the suitable structure
-void f_convertToStructure(FILE* inputFile)
+void f_assembleFirstPass(FILE* inputFile)
 {
 	//has label in that row or not
 	char* isLabelInRow = NULL;
@@ -138,7 +243,7 @@ void f_convertToStructure(FILE* inputFile)
 	size_t rowLength;
 	char* row;
 	//is had error(0) in the row or:
-	 //indictae is it have label(1), is it insturction(2) or data(4).
+	 // is it insturction(1) or data(2).
 	int status;
 	//while there are rows in the file
 	while (len = getline(&row, &rowLength, inputFile) != 0)
@@ -159,21 +264,34 @@ void f_convertToStructure(FILE* inputFile)
 				if (status == 1)
 				{
 					f_manamgeInstruction(row, isLabelInRow);
-					//inc the instrucion counter
-					IC++;
 				}
 				//status =2 mean is data instruction
 				if (status == 2)
 				{
-					f_manageData(row, isLabelInRow);
-					//inc the data counter
-					DC++;
+					f_manageDirective(row, isLabelInRow);
 				}
 			}
 		}
 		//inc the row number
 		rowNum++;
 	}
+}
+
+//count rows in input file to know allocate the hash as need
+//should fix it not to count rows without label
+int CountRowsInFile(FILE* inputFile)
+{
+	char c;
+	int count = 0;
+	// Extract characters from file and store in character c
+	for (c = getc(inputFile); c != EOF; c = getc(inputFile))
+	{ 
+		if (c == '\n') // Increment count if this character is newline
+		{
+			count++;
+		}
+	}
+	return count - 1;
 }
 
 

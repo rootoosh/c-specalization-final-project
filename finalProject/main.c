@@ -19,7 +19,11 @@ int main()
 	{	
 		perror("canot open the input file");
 	}
-	//assembelrReader(inputFile);
+	//int n=countrows(inputFile)
+	//allocate hashForSymbol(n)
+	//f_assembleFirstPass(inputFile);
+	//f_assenmbleSecondPass(inputFile,listDAta,listInstruction)
+	//f_
 	if (fclose(inputFile) != 0)
 	{
 		perror("could not close the file");
