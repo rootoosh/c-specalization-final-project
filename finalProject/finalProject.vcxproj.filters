@@ -21,15 +21,27 @@
     <ClCompile Include="structures.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="assembler.c">
+    <ClCompile Include="commandsData.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="commandsData.h">
+    <ClCompile Include="manageDirective.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="assembler.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="validation.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="symbolsHash.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="manageInstruction.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="helpers.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

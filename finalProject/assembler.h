@@ -1,61 +1,87 @@
+#include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
+#include "structures.h"
+#include "validation.h"
+#include "manageInstruction.h"
+#include "manageDirective.h"
 
-//struct of assembly command for validation on commands
-typedef struct 
+//function to read row, check is valid, 
+//put in the suitable structure
+void f_assembleFirstPass(FILE* inputFile)
 {
-	char* name;
-	//type of resident method can be the source operands
-	int sourceResident[3];
-	//type of resident method can be the dest operands
-	int destResident[3];
-	//num of operators should be in that command
-	int numOperators;
-}S_command;
+	//has label in that row or not
+	char* isLabelInRow = NULL;
+	//number of row in the input file
+	int rowNum = 0;
+	int len = 0;
+	size_t rowLength;
+	char* row=(char*)malloc(sizeof(char));
+	//is had error(0) in the row or:
+	 // is it insturction(1) or data(2).
+	int status;
+	//while there are rows in the file
+	while (len = getline(&row, &rowLength, inputFile) != 0)
+	{
+		//print error of too many characters
+		if (len > 80)
+		{
+			printf("in row %d too many charcters in row", rowNum);
+		}
+		else
+		{
+			//if getline success to read from the file
+			if (len != -1)
+			{
+				//chcek if the row is valid, and is it data or instructio
+				status = f_checkIsValidRow(row, rowNum, &isLabelInRow);
+				//status =1 mean is instrucion
+				if (status == 1)
+				{
+					f_manamgeInstruction(row, isLabelInRow);
+				}
+				//status =2 mean is data instruction
+				if (status == 2)
+				{
+					f_manageDirective(row, isLabelInRow);
+				}
+			}
+		}
+		//inc the row number
+		rowNum++;
+	}
+}
+//the order of assembelr:
+//pre passion - count rows in file
+//init hash table for symbols
+//first pass
+//second pass
+//in the second pass we shuold check all the nodes: if the field "first operand" or "secondOperand "
+//not null- we shuld do something
+//if error flag is true:
+//free alocation memory in list
+//and return file with errors
+//if error flag is false:
+//write output files
 
-//struct of binary code machine or data
-//this is the requested output
-//for the .ob file
-typedef struct 
+
+//count rows in input file to know allocate the hash as need
+//should fix it not to count rows without label
+int CountRowsInFile(FILE* inputFile)
 {
-	unsigned char destRegister : 3;
-	unsigned char destResident : 3;
-	unsigned char sourceRegister : 3;
-	unsigned char sourecResident : 3;
-	unsigned char command : 4;
-	//total: 16 bits
-}S_binaryCodeMachineOrData;
-
-//struct represent node in data list and in instruction list
-typedef struct node
-{
-	int adress;
-	char* label;
-	char* command;
-	char* firstOperand;
-	char* secondOperand;
-	S_binaryCodeMachineOrData binaryCode;
-	node* next;
-}*S_node;
-
-typedef struct
-{
-	char* label;
-	int address;
-}S_symbol;
-
-//make array that represent all the commands that valid in assembly
-S_command cammoandTable[];
+	char c;
+	int count = 0;
+	// Extract characters from file and store in character c
+	for (c = getc(inputFile); c != EOF; c = getc(inputFile))
+	{
+		if (c == '\n') // Increment count if this character is newline
+		{
+			count++;
+		}
+	}
+	return count - 1;
+}
 
 
-/*
-need symbol tble with dynamic allocation
-need data&instruction table with dynamic alocation
-need IC and DC counters
-need functino to initilize comandTable
-need fucntion to firstCycleîòáø øàùåï and fill all
-that possible: 
- */
 
-S_node dataList = (S_node)malloc(sizeof(S_node));
 

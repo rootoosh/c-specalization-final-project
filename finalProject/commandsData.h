@@ -15,17 +15,18 @@ typedef struct
 S_command cammoandTable[16];
 
 //the num that represent the command is the index of that command in the commandTable
-int f_getNumCommand(char* commandStr)
+int f_getNumCommand(char commandStr[3])
 {
 	// cammoandTable פשוט מחזירה מס' פקודה בין 0 ל15 צריך לעשות חיפוש  במערך
+	return 0;
 }
 //בקובץ הולידצדיות צריך לעשות פה בדיקות
 int f_check()
 {
-
+	return 0;
 }
 //get num of operand to that command by command name
-int f_getNumOperandsByCommandName(char* commandName)
+int f_getNumOperandsByCommandName(char commandName[3])
 {
 	int indexCommand = f_getNumCommand(commandName);
 	return cammoandTable[indexCommand].numOperands;

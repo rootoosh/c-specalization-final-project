@@ -1,11 +1,10 @@
 ﻿
-
-
 // finalProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "structures.h"
+#include "assembler.h"
 //here i just open the input file and send to the assembelr program
 int main()
 {
@@ -19,6 +18,7 @@ int main()
 	{	
 		perror("canot open the input file");
 	}
+	initList();
 	//int n=countrows(inputFile)
 	//allocate hashForSymbol(n)
 	//f_assembleFirstPass(inputFile,listData,listInstrucion);
