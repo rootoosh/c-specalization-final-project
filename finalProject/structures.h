@@ -22,7 +22,7 @@ typedef struct nodeI
 {
 	int adress;
 	char* label;
-	char* command;
+	char command[3];
 	char* firstOperand;
 	char* secondOperand;
 	/*S_binaryCodeMachineOrData binaryCode;*/

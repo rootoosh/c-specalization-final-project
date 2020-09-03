@@ -5,13 +5,59 @@
 #include "validation.h"
 #include "commandsData.h"
 
+//get string and check is it register or label operand. in the nameOp put the name nice with \n
+int f_checkRegistOrLabel(char* row, char** nameOp)
+{
+	int resultType=0;
+	char c;
+	size_t num;
+	*nameOp = row;
+	//register must start with r + number + white space or ','
+	if (*row == 'r')
+	{
+		c = *(row + 1);
+		num = atoi(c);
+		//check is num between 0 to 7
+		if (num <= 7)
+		{
+			//after the register operand shuold be: one of:", \t\n"
+			switch (*(row + 2))
+			{
+				case ',':
+				case ' ':
+				case '\t':
+				case '\n':
+				{
+					//for register need to put /n in the end after r_num
+					*((*nameOp) + 2) = '\0';
+					//hold only the num of register
+					(*nameOp)++;
+					return resultType;
+				}
+					break;
+
+				default:resultType = 1;
+				break;
+			}
+		}
+	}
+	//find the end of the operand by using temp pointer
+	char* temp=row;
+	while ((*temp) && (*temp != ',') && (*temp != ' ') && (*temp != '\t') && (*temp != '\n'))
+	{
+		temp++;
+	}
+	*temp = '\0';
+	return resultType;
+}
 
 //row point on the char just after the command
 void f_instrct2operand(char* row, S_nodeInstruction* newNode)
 {
 	/*
-	פונקציה זו אמורה למלא בצומת החדש את השדה אופרנד שני,
-	וכן את השדה קוד בינרי- בביטים הקשורים לאופרנד שני
+
+	פונקציה זו אמורה למלא בצומת החדש את שדות שני האופרנדים ,
+	וכן את השדה קוד בינרי- בביטים הקשורים לשני האופרנדים
 
 	צריך להפריד את האופרנדים למחרוזות
 	לשלוח לפונקציות המתיאמות לשיטות המיעון
@@ -23,12 +69,44 @@ void f_instrct2operand(char* row, S_nodeInstruction* newNode)
 //row point on the char just after the command
 void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 {
+
 	/*
-	פונקציה זו אמורה למלא בצומת החדש את השדה אופרנד ראשון,
-	וכן את השדה קוד בינרי- בביטים הקשורים לאופרנד ראשון
+	פונקציה זו אמורה למלא בצומת החדש את השדה אופרנד שני,
+	וכן את השדה קוד בינרי- בביטים הקשורים לאופרנד שני
 	לא לעשות דברים מיותרים רק לפי מה שהגיוני  שיהיה
 	לדוגמא אופרנד אחד לא יכול להיות מעון ישיר אין לבדוק זאת
 	*/
+	//ignore the spaces and go to letters- that must represent command
+	while ((*row == ' ') || (*row == '\t'))
+	{
+		row++;
+	}
+	//if it is relative residence - shuld manage with the binary code to put it,
+	//and read the label after the "*" to the next node in the listInstruction. also inc IC
+	if (*row == '*')
+	{
+		//the row+1 point after the '*'. 
+		f_manageRelativeResidence(row + 1, newNode);
+	}
+	//indirect residence
+	if (*row == '@')
+	{
+		//it is register(0) or label(1).return by pointer the name of label/ num of register
+		char* nameOp;
+		//the row+1 mean point just after the 'a'
+		size_t typeOperand=f_checkRegistOrLabel(row + 1, &nameOp);
+		//if is regsiter
+		if (!typeOperand)
+		{
+			f_putBinaryCode(5, newNode, 5);
+			f_putBinaryCode(atoi(nameOp), newNode, 2);
+		}
+		//if is label
+		else
+		{
+
+		}
+	}
 }
 
 //find # mean Instant residence method
@@ -68,16 +146,24 @@ void f_insertLabel(char* label, E_typeLabel labelType)
 	*/
 }
 
+void f_putBinaryCode(int numCommand, S_nodeInstruction* node, size_t lastIndex)
+{
+	//the mask is type of node because i need int with 16 bits only
+	S_nodeInstruction* mask = (S_nodeInstruction*)malloc(sizeof(S_nodeInstruction*));
+	mask->binaryCode = numCommand;
+	mask->binaryCode << (lastIndex - 2);
+	node->binaryCode += mask->binaryCode;
+}
 //deal with the instruction list,
 void f_manamgeInstruction(char* row, char* isLabel)
 {
 	//the new node struct
-	S_nodeInstruction* newNode = (S_nodeInstruction*)malloc(sizeof(S_nodeInstruction));
+	S_nodeInstruction* newNode = (S_nodeInstruction*)malloc(sizeof(S_nodeInstruction*));
 	//connect the new node to the llist
 	newNode->next = NULL;
 	tailInstrucionList->next = newNode;
 	tailInstrucionList = newNode;
-
+	newNode->binaryCode = 0;
 	//copy the address to the node istruction struct from IC
 	newNode->adress = IC;
 	//inc the instrucion counter
@@ -92,7 +178,6 @@ void f_manamgeInstruction(char* row, char* isLabel)
 		//row point after ther label
 		row += strlen(isLabel) + 1;
 	}
-
 	//ignore the spaces and go to letters- that must represent command
 	while ((*row == ' ') || (*row == '\t'))
 	{
@@ -100,6 +185,9 @@ void f_manamgeInstruction(char* row, char* isLabel)
 	}
 	//copy the command name to the node instruction struct
 	strncpy(newNode->command, row, 3);
+	//put the command code in the binary code
+	int numCommand = f_getNumCommand(newNode->command);
+	f_putBinaryCode(numCommand, newNode, 15);
 	//row point after the command
 	row += 3;
 	//initilize first and second operand
@@ -138,6 +226,9 @@ void f_modifyLabel(char* row, E_scopeLabel scope)
 	//send to "updateScopeLabel(char * label,E_scopeLabel scope)"
 }
 
+<<<<<<< HEAD
+void f_manageData(char* row, S_nodeData* newNode)
+=======
 //initialize DataNode for .data directive
 void f_initializeDataNode(S_nodeData* node, int num)
 {
@@ -153,6 +244,7 @@ void f_initializeDataNode(S_nodeData* node, int num)
 
 //get row which is directive- and manage the data of this row
 void f_manageData(char* row, S_nodeData* node)
+>>>>>>> 50d123b439a9860abe33c4776e8f9dadeab74bd4
 {
 	/*
 	לקרא מספרים ממחרוזת שהתקבלה ולהכניס אותם ברשימה כל מספר בצומת ולקדם מונה נתונים
@@ -311,7 +403,7 @@ void f_manageDirective(char* row, char* isLabel)
 	else
 	{
 		//the new node struct
-		S_nodeData* newNode = (S_nodeData*)malloc(sizeof(S_nodeData));
+		S_nodeData* newNode = (S_nodeData*)malloc(sizeof(S_nodeData*));
 		//connect the new node to the llist
 		newNode->next = NULL;
 		tailDataList->next = newNode;
