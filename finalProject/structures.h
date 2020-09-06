@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef enum class E_scopeLabel{local ,entry,external};
-typedef enum class E_typeLabel{ data,instruction};
+typedef enum  { local, entry, external } E_scopeLabel;
+typedef enum  { data,instruction}E_typeLabel;
 
 //struct of binary code machine or data
 //this is the requested output

@@ -1,10 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include "structures.h"
 #include "helpers.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
 #include "symbolsHash.h"
-#include <string.h>
+
 
 //initialize DataNode for .data directive
 void f_initializeDataNode(struct nodeD* node, int num)

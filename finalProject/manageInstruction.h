@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include "structures.h"
 #include "commandsData.h"

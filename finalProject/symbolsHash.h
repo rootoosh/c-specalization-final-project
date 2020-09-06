@@ -1,6 +1,6 @@
-#include "structures.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "structures.h"
 //get label and scope and modity the scope of the label in the hash symbols table
 void f_updateScopeLabel(char* label, E_scopeLabel scope)
 {
