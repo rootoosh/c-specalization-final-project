@@ -18,7 +18,7 @@ int f_checkRegistOrLabel(char* row, char** nameOp)
 	{
 		c = *(row + 1);
 		//check is num between 0 to 7
-		if (isdigit(c) )
+		if (isdigit(c) && atoi(c)<=7 )
 		{
 			//after the register operand shuold be: one of:", \t\n\0"
 			switch (*(row + 2))
@@ -54,6 +54,80 @@ int f_checkRegistOrLabel(char* row, char** nameOp)
 //row point on the char just after the command
 void f_instrct2operand(char* row, S_nodeInstruction* newNode)
 {
+	//it is register(0) or label(1).return by pointer the name of label/ num of register
+	char* nameOp;
+
+	size_t typeOperand;
+
+	row = f_ingnoreSpaces(row);
+	//treat first operand:
+	{
+		if (*row == '#')
+		{
+			row++;
+			//note: can add node and change the newNode pointer
+			f_manageInstandResidence(row, newNode, 1);
+		}
+		//indirect
+		else if (*row == '@')
+		{
+			//the row+1 mean point just after the '@'
+			typeOperand = f_checkRegistOrLabel(row + 1, &nameOp);
+			//if is regsiter
+			if (!typeOperand)
+			{
+				//put the residence method code(indiercet register=5) in the 9-11 bit palce
+				f_putBinaryCode(5, newNode, 11);
+				//put the register num in the 8-6 bit place
+				f_putBinaryCode(atoi(nameOp), newNode, 8);
+			}
+			//if is label
+			else
+			{
+				//put the residence method code(indiercet =1) in the 9-11 bit palce
+				f_putBinaryCode(2, newNode, 11);
+				f_putLabelInNode(nameOp, newNode, 1);
+			}
+		}
+		//direct
+		else
+		{
+			typeOperand = f_checkRegistOrLabel(row + 1, &nameOp);
+			//if is register
+			if (!typeOperand)
+			{
+				//put the residence method code(direcct=4) in the 9-11 bit palce
+				f_putBinaryCode(4, newNode, 11);
+				//put the register num in the 0-2 bit place
+				f_putBinaryCode(atoi(nameOp), newNode, 8);
+			}
+			else
+			{
+				//put the residence method code(direcct label=1) in the 9-11 bit palce
+				f_putLabelInNode(row, newNode,1);
+				f_putBinaryCode(1, newNode, 11);
+			}
+		}
+	}
+	//treat second operand
+	{
+		//find ',' and send what after to the function that will deal with it
+
+		row = strchr(row, ',');
+		row++;
+		row = f_ingnoreSpaces(row);
+		//for cmp it can be instant residence in the second operand!
+		if (*row == '#')
+		{
+			row++;
+			//note: can add node and change the newNode pointer
+			f_manageInstandResidence(row, newNode, 2);
+		}
+		else
+		{
+			f_instrct1operand(row, newNode);
+		}
+	}
 	/*
 
 	פונקציה זו אמורה למלא בצומת החדש את שדות שני האופרנדים ,
@@ -75,8 +149,40 @@ void f_putBinaryCode(int numCommand, S_nodeInstruction* node, int lastIndex)
 }
 
 //find # mean Instant residence method
-void f_manageInstandResidence(char* row, S_nodeInstruction* newNode)
+void f_manageInstandResidence(char* row, S_nodeInstruction* node, int serialOperand)
 {
+	//should get the num from the char and put the ascii kod in the next node
+	char* endNumber;
+	int number;
+	endNumber = strchr(row, ',');
+	*endNumber = '\0';
+	number = atoi(row);
+	if (serialOperand == 1)
+	{
+		//הדלק סיביות אופרנד ראשון 9-11בשיטת מעון 0
+		f_putBinaryCode(0, node, 11);
+	}
+	else
+	{
+		//הדלק סיביות אופרנד שני 3-5בשיטת מעון 0
+		f_putBinaryCode(0, node, 5);
+	}
+
+	//prepare node for the next passion to fill with the address of the label
+	struct nodeI* newNode = (struct nodeI*)malloc(sizeof(struct nodeI));
+	//connect the new node to the llist
+	newNode->next = NULL;
+	node->next = newNode;
+	tailInstrucionList = newNode;
+	newNode->binaryCode = 1;
+	// 1&num -Put the number in binary representation
+	newNode->binaryCode = (newNode->binaryCode & number);
+	//copy the address to the node istruction struct from IC
+	newNode->address = IC;
+	//inc the instrucion count
+	IC++;
+	newNode->firstOperand = NULL;
+	newNode->secondOperand = NULL;
 	/*
 	1. לכתוב שיטת מעון בבינראי קוד של הצומת החדש - צריך להשתמש במסכה כדי לכתוב את זה בסיביות המתאימות
 	כלומר בסיביו ת של שיטת מעון האופרנד הראשון
@@ -89,16 +195,67 @@ void f_manageInstandResidence(char* row, S_nodeInstruction* newNode)
 	*/
 }
 
-void f_manageRelativeResidence(char * row, S_nodeInstruction* newNode)
-{}
 
-//row point on the char just after the command
+void f_putLabelInNode(char* label, S_nodeInstruction* node, int serialOperand)
+{
+	char* endLabel = label;
+	int numChars;
+	while ((*endLabel != ' ') && (*endLabel != '\t') &&
+		(*endLabel != '\0') && (*endLabel != '\n') && (*endLabel != ','))
+	{
+		endLabel++;
+	}
+	numChars = endLabel - label;
+	if (serialOperand == 1)
+	{
+		node->secondOperand = (char*)malloc(sizeof(char) * numChars + 1);
+		node->secondOperand[numChars] = '\n';
+		strncpy(node->secondOperand, label, numChars);
+	}
+	else if (serialOperand == 2)
+	{
+		node->firstOperand = (char*)malloc(sizeof(char) * numChars + 1);
+		node->firstOperand[numChars] = '\n';
+		strncpy(node->firstOperand, label, numChars);
+	}
+	////prepare node for the next passion to fill with the address of the label
+	//struct nodeI* newNode = (struct nodeI*)malloc(sizeof(struct nodeI));
+	////connect the new node to the llist
+	//newNode->next = NULL;
+	//node->next = newNode;
+	//tailInstrucionList = newNode;
+	//newNode->binaryCode = 0;
+	////copy the address to the node istruction struct from IC
+	//newNode->address = IC;
+
+	//inc the instrucion count
+	IC++;
+
+}
+//את הפונקציה הזו כתבתי כשתכננתי לעשות נורא מסודר אבל בסוף לא. לא נורא...
+//void f_manageLabelDirectiveResidence(char* label, S_nodeInstruction* newNode,int serialOperand)
+//{
+//	f_putLabelInNode(label, newNode,serialOperand);
+//	//put the residence method code(diercet label=) in the 3-5 bit palce
+//	f_putBinaryCode(1, newNode, 5);
+//
+//}
+//*
+void f_manageRelativeResidence(char* row, S_nodeInstruction* newNode )
+{
+	f_putLabelInNode(row, newNode,2);
+	//put the residence method code(relative=) in the 3-5 bit palce
+	f_putBinaryCode(3, newNode, 5);
+}
+
+//row point on the char just after the command 
+//or just after the , of the first operand
 void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 {
 
 	//it is register(0) or label(1).return by pointer the name of label/ num of register
 	char* nameOp;
-	
+
 	size_t typeOperand;
 
 	/*
@@ -119,7 +276,7 @@ void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 	//indirect residence
 	else if (*row == '@')
 	{
-		//the row+1 mean point just after the 'a'
+		//the row+1 mean point just after the '@'
 		typeOperand = f_checkRegistOrLabel(row + 1, &nameOp);
 		//if is regsiter
 		if (!typeOperand)
@@ -134,31 +291,29 @@ void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 		{
 			//put the residence method code(indiercet =2) in the 3-5 bit palce
 			f_putBinaryCode(2, newNode, 5);
-			newNode->secondOperand = nameOp;
+			f_putLabelInNode(row, newNode, 2);
 		}
 	}
+	//direct
 	else
 	{
-		typeOperand= f_checkRegistOrLabel(row + 1, &nameOp);
+		typeOperand = f_checkRegistOrLabel(row + 1, &nameOp);
 		//if is register
 		if (!typeOperand)
 		{
 			//put the residence method code(direcct=4) in the 3-5 bit palce
 			f_putBinaryCode(4, newNode, 5);
 			//put the register num in the 0-2 bit place
-			f_putBinaryCode(atoi(nameOp),newNode, 2);
+			f_putBinaryCode(atoi(nameOp), newNode, 2);
 		}
 		else
 		{
-
+			//put the residence method code(direcct label=2) in the 3-5 bit palce
+			f_putLabelInNode(row, newNode,2);
+			f_putBinaryCode(1, newNode, 5);
 		}
 	}
-
-
 }
-
-
-
 
 //deal with the instruction list,
 void f_manamgeInstruction(char* row, char* isLabel)
