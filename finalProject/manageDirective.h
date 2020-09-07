@@ -167,6 +167,7 @@ void f_manageDirective(char* row, char* isLabel)
 		//row point after ther label
 		row += strlen(isLabel) + 1;
 	}
+
 	//ignore the spaces and go to letters- that must represent .data or .string .entry .extern
 	row = strchr(row, '.');
 	row++;
