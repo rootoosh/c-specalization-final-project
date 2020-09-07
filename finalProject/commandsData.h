@@ -31,3 +31,11 @@ int f_getNumOperandsByCommandName(char commandName[3])
 	int indexCommand = f_getNumCommand(commandName);
 	return cammoandTable[indexCommand].numOperands;
 }
+int f_getNumOperandsByCommandIndex(int command)
+{
+	return cammoandTable[command].numOperands;
+}
+int f_matchCommandResidence(int command, int residenceMethod, int operandSerial)
+{
+	//return commandTa
+}

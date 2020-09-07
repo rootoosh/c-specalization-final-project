@@ -21,7 +21,7 @@ void f_assembleFirstPass(FILE* inputFile)
 	 // is it insturction(1) or data(2).
 	int status;
 	//while there are rows in the file
-	while (len = getline(&row, &rowLength, inputFile) != 0)
+	while ((len = getline(&row, &rowLength, inputFile)) != 0)
 	{
 		//print error of too many characters
 		if (len > 80)
