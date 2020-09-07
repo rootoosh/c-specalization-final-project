@@ -21,7 +21,7 @@ void f_assembleFirstPass(FILE* inputFile)
 	 // is it insturction(1) or data(2).
 	int status;
 	//while there are rows in the file
-	while ((len = getline(&row, &rowLength, inputFile)) != 0)
+	while (len = getline(&row, &rowLength, inputFile) != 0)
 	{
 		//print error of too many characters
 		if (len > 80)
@@ -58,6 +58,8 @@ void f_assembleFirstPass(FILE* inputFile)
 //second pass
 //in the second pass we shuold check all the nodes: if the field "first operand" or "secondOperand "
 //not null- we shuld do something
+//we should indicate also somthing improtant:
+//is the second pass shuld put adress of second operand (usually) or put the far of adress of second operand (for *)
 //if error flag is true:
 //free alocation memory in list
 //and return file with errors
