@@ -1,18 +1,38 @@
 
-//struct of assembly command for validation on commands
+
 typedef struct
 {
-	char* name;
 	//type of resident method can be the source operands
-	int sourceResident[3];
+	int sourceResident[6];
 	//type of resident method can be the dest operands
-	int destResident[3];
+	int destResident[6];
+	char name[4];
 	//num of operators should be in that command
 	int numOperands;
 }S_command;
 
 //make array that represent all the commands that valid in assembly
-S_command cammoandTable[16];
+S_command cammoandTable[16]
+{
+
+{{1,1,1,0,1,1}, {0,1,1,0,1,1}, "mov", 2},
+{{1,1,1,0,1,1}, {1,1,1,0,1,1}, "cmp", 2},
+{{1,1,1,0,1,1}, {0,1,1,0,1,1}, "add", 2},
+{{1,1,1,0,1,1}, {0,1,1,0,1,1}, "sub", 2},
+{{1,1,1,0,1,1}, {0,1,1,0,1,1}, "mul", 2},
+{{1,1,1,0,1,1}, {0,1,1,0,1,1}, "div", 2},
+{{0,1,0,0,0,0}, {0,1,1,0,1,1}, "lea", 2},
+{{0,0,0,0,0,0,}, {0,1,1,0,1,1}, "inc", 1},
+{{0,0,0,0,0,0,}, {0,1,1,0,1,1}, "dec", 1},
+{{0,0,0,0,0,0,}, {0,1,1,1,1,1}, "brz", 1},
+{{0,0,0,0,0,0,}, {0,1,1,1,1,1}, "jmp", 1},
+{{0,0,0,0,0,0,}, {0,1,1,0,1,1}, "red", 1},
+{{0,0,0,0,0,0,}, {0,1,1,0,1,1}, "prn", 1},
+{{0,0,0,0,0,0,}, {0,1,1,1,1,1}, "jsr", 1},
+{{0,0,0,0,0,0,}, {0,0,0,0,0,0,}, "rts", 0},
+{{0,0,0,0,0,0,}, {0,0,0,0,0,0,}, "hlt", 0},
+
+};
 
 //the num that represent the command is the index of that command in the commandTable
 int f_getNumCommand(char commandStr[3])
