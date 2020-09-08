@@ -363,6 +363,11 @@ int f_checkIsValidInstruction(char* row, int numRow)
 		return 0;
 	//row point just after the command
 	row += 3;
+	//command with no operands are: 14, 15
+	if (numCommand >= 14)
+	{
+		return 1;
+	}
 	if (*row != ' ' || *row != '\t')
 	{
 		printf("Error!, in row %d, must have spasce near the command", numRow);

@@ -31,11 +31,7 @@ int f_getNumCommand(char commandStr[3])
 }
 
 //get num of operand to that command by command name
-int f_getNumOperandsByCommandName(char commandName[3])
-{
-	int indexCommand = f_getNumCommand(commandName);
-	return cammoandTable[indexCommand].numOperands;
-}
+
 int f_getNumOperandsByCommandIndex(int command)
 {
 	return cammoandTable[command].numOperands;
