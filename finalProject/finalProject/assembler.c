@@ -58,18 +58,26 @@ void f_assembleFirstPass(FILE* inputFile)
 		rowNum++;
 	}
 }
-//the order of assembelr:
-//pre passion - count rows in file
-//init hash table for symbols
-//first pass
-//second pass
-//in the second pass we shuold check all the nodes: if the field "first operand" or "secondOperand "
-//not null- we shuld do something
-//if error flag is true:
-//free alocation memory in list
-//and return file with errors
-//if error flag is false:
-//write output files
+
+/*
+the order of assembelr:
+
+1.first pass
+2.if error flag is true:
+free alocation memory in list
+and return file with errors
+3.if error flag is false:
+init hash table for symbols.convert form list to hash
+second pass
+in the second pass we shuold check all the nodes:
+if the field "first operand" or "secondOperand "
+not null- we shuld do something
+for lebels should manage address 
+4.write output files
+5.  free alocation memory
+*/
+
+
 
 
 //count rows in input file to know allocate the hash as need

@@ -27,6 +27,7 @@ typedef struct nodeI
 	char* secondOperand;
 	/*S_binaryCodeMachineOrData binaryCode;*/
 	unsigned int binaryCode : 16;
+	char state;
 	struct nodeI* next;
 }S_nodeInstruction;
 
@@ -65,16 +66,16 @@ struct arraySymbol
 };
 
 //instruction counter
-int IC;
+int IC=0;
 //data counter
-int DC;
+int DC=0;
 
 //the list of instriction :1 pointer as head. 1 pointer as tail
 
-struct nodeI* headInstrucionList;
+struct nodeI* headInstrucionList=NULL;
 struct nodeI* tailInstrucionList;
 //the list of data: 1 pointer as 
-struct nodeD* headDataList;
+struct nodeD* headDataList=NULL;
 struct nodeD* tailDataList;
 
 //prototype of helpers function for all sulotion-helpers.c
@@ -82,6 +83,7 @@ char* f_ingnoreSpaces(char* string);
 
 //prototype of initilize function-structures.c
 void initList();
+struct nodeI* f_insertInstruction();
 
 typedef struct
 {

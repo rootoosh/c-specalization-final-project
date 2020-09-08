@@ -168,21 +168,16 @@ void f_manageInstandResidence(char* row, S_nodeInstruction* node, int serialOper
 		f_putBinaryCode(0, node, 5);
 	}
 
-	//prepare node for the next passion to fill with the address of the label
-	struct nodeI* newNode = (struct nodeI*)malloc(sizeof(struct nodeI));
-	//connect the new node to the llist
-	newNode->next = NULL;
+	//new node for the number
+	struct nodeI* newNode = f_insertInstruction();
+	newNode->state = 'a';
 	node->next = newNode;
-	tailInstrucionList = newNode;
 	newNode->binaryCode = 1;
 	// 1&num -Put the number in binary representation
 	newNode->binaryCode = (newNode->binaryCode & number);
-	//copy the address to the node istruction struct from IC
-	newNode->address = IC;
 	//inc the instrucion count
 	IC++;
-	newNode->firstOperand = NULL;
-	newNode->secondOperand = NULL;
+
 	/*
 	1. לכתוב שיטת מעון בבינראי קוד של הצומת החדש - צריך להשתמש במסכה כדי לכתוב את זה בסיביות המתאימות
 	כלומר בסיביו ת של שיטת מעון האופרנד הראשון
@@ -206,13 +201,13 @@ void f_putLabelInNode(char* label, S_nodeInstruction* node, int serialOperand)
 		endLabel++;
 	}
 	numChars = endLabel - label;
-	if (serialOperand == 1)
+	if (serialOperand == 2)
 	{
 		node->secondOperand = (char*)malloc(sizeof(char) * numChars + 1);
 		node->secondOperand[numChars] = '\n';
 		strncpy(node->secondOperand, label, numChars);
 	}
-	else if (serialOperand == 2)
+	else if (serialOperand == 1)
 	{
 		node->firstOperand = (char*)malloc(sizeof(char) * numChars + 1);
 		node->firstOperand[numChars] = '\n';
@@ -252,18 +247,11 @@ void f_manageRelativeResidence(char* row, S_nodeInstruction* newNode)
 //or just after the , of the first operand
 void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 {
-
 	//it is register(0) or label(1).return by pointer the name of label/ num of register
 	char* nameOp;
 
 	size_t typeOperand;
 
-	/*
-	פונקציה זו אמורה למלא בצומת החדש את השדה אופרנד שני,
-	וכן את השדה קוד בינרי- בביטים הקשורים לאופרנד שני
-	לא לעשות דברים מיותרים רק לפי מה שהגיוני  שיהיה
-	לדוגמא אופרנד אחד לא יכול להיות מעון ישיר אין לבדוק זאת
-	*/
 	//ignore the spaces and go to letters- that must represent command
 	row = f_ingnoreSpaces(row);
 	//if it is relative residence - shuld manage with the binary code to put it,
@@ -319,14 +307,7 @@ void f_instrct1operand(char* row, S_nodeInstruction* newNode)
 void f_manamgeInstruction(char* row, char* isLabel)
 {
 	//the new node struct
-	struct nodeI* newNode = (struct nodeI*)malloc(sizeof(struct nodeI));
-	//connect the new node to the llist
-	newNode->next = NULL;
-	tailInstrucionList->next = newNode;
-	tailInstrucionList = newNode;
-	newNode->binaryCode = 0;
-	//copy the address to the node istruction struct from IC
-	newNode->address = IC;
+	struct nodeI* newNode = f_insertInstruction();
 	//inc the instrucion counter
 	IC++;
 	//first check if is label here
@@ -343,17 +324,15 @@ void f_manamgeInstruction(char* row, char* isLabel)
 	row = f_ingnoreSpaces(row);
 	//copy the command name to the node instruction struct
 	strncpy(newNode->command, row, 3);
+	//row point after the command
+	row += 3;
+	//the state of the node is a- absulute. because it is command
+	newNode->state = 'a';
 	//put the command code in the binary code
 	int numCommand = f_getNumCommand(newNode->command);
 	f_putBinaryCode(numCommand, newNode, 15);
-	//row point after the command
-	row += 3;
-	//initilize first and second operand
-	newNode->firstOperand = NULL;
-	newNode->secondOperand = NULL;
-
 	//send to suitable function -denpend on the number of operands
-	int numOperands = f_getNumOperandsByCommandName(newNode->command);
+	int numOperands = f_getNumOperandsByCommandIndex(numCommand);
 	if (numOperands == 1)
 	{
 		f_instrct1operand(row, newNode);
