@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef enum  { local, entry, external } E_scopeLabel;
-typedef enum  { data,instruction}E_typeLabel;
+typedef enum { local, entry, external } E_scopeLabel;
+typedef enum { data, instruction }E_typeLabel;
 
 //struct of binary code machine or data
 //this is the requested output
@@ -49,12 +49,8 @@ typedef struct symbol
 {
 	char* label;
 	int address;
-	//0 regular
-	//1 entry
-	//2 extrnal
-	E_scopeLabel scope;
-	//instruction or data
-	E_typeLabel type;
+	E_scopeLabel scope; //0- local 1- entry  2- extrnal
+	E_typeLabel type; //instruction or data
 	symbol* next;
 }S_symbol;
 
@@ -104,5 +100,5 @@ need data&instruction table with dynamic alocation
 need IC and DC counters
 need functino to initilize comandTable
 need fucntion to firstCycleîòáø øàùåï and fill all
-that possible: 
+that possible:
  */
