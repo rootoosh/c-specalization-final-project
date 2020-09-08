@@ -1,0 +1,122 @@
+﻿  assembler.c
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,17): error C2365: 'local': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,22): error C2086: 'local': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,24): error C2365: 'entry': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,29): error C2086: '<unnamed-enum-local> entry': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,31): error C2365: 'external': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,40): error C2086: '<unnamed-enum-local> external': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,17): error C2365: 'data': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,21): error C2086: 'data': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,33): error C2086: '<unnamed-enum-data> instruction': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(35,1): error C2011: 'nodeD': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(34): message : see declaration of 'nodeD'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(50,1): error C2011: 'symbol': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(49): message : see declaration of 'symbol'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92,2): error C2371: 'S_command': redefinition; different basic types
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92): message : see declaration of 'S_command'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,17): error C2365: 'local': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,22): error C2086: 'local': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,24): error C2365: 'entry': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,29): error C2086: '<unnamed-enum-local> entry': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,31): error C2365: 'external': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,40): error C2086: '<unnamed-enum-local> external': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,17): error C2365: 'data': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,21): error C2086: 'data': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,33): error C2086: '<unnamed-enum-data> instruction': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(35,1): error C2011: 'nodeD': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(34): message : see declaration of 'nodeD'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(50,1): error C2011: 'symbol': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(49): message : see declaration of 'symbol'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92,2): error C2371: 'S_command': redefinition; different basic types
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92): message : see declaration of 'S_command'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,17): error C2365: 'local': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,22): error C2086: 'local': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,24): error C2365: 'entry': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,29): error C2086: '<unnamed-enum-local> entry': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,31): error C2365: 'external': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,40): error C2086: '<unnamed-enum-local> external': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,17): error C2365: 'data': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,21): error C2086: 'data': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,33): error C2086: '<unnamed-enum-data> instruction': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(35,1): error C2011: 'nodeD': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(34): message : see declaration of 'nodeD'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(50,1): error C2011: 'symbol': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(49): message : see declaration of 'symbol'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92,2): error C2371: 'S_command': redefinition; different basic types
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92): message : see declaration of 'S_command'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\assembler.c(25,23): warning C4013: 'getline' undefined; assuming extern returning int
+  commandsData.c
+  manageDirective.c
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,17): error C2365: 'local': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,22): error C2086: 'local': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,24): error C2365: 'entry': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,29): error C2086: '<unnamed-enum-local> entry': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,31): error C2365: 'external': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4,40): error C2086: '<unnamed-enum-local> external': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,17): error C2365: 'data': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,21): error C2086: 'data': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5,33): error C2086: '<unnamed-enum-data> instruction': redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(35,1): error C2011: 'nodeD': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(34): message : see declaration of 'nodeD'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(50,1): error C2011: 'symbol': 'struct' type redefinition
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(49): message : see declaration of 'symbol'
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92,2): error C2371: 'S_command': redefinition; different basic types
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\structures.h(92): message : see declaration of 'S_command'
+  structures.c
+  main.c
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\main.c(20,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  symbolsHash.c
+  Generating Code...
+C:\Users\מחשב לכל ילד\Downloads\finalProject\finalProject\commandsData.c(53): warning C4715: 'f_matchCommandResidence': not all control paths return a value
