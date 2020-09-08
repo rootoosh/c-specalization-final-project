@@ -55,14 +55,14 @@ typedef struct symbol
 }S_symbol;
 
 
-struct arraySymbol
+ typedef struct arraySymbol
 {
 	S_symbol* head;
 	/* head pointing the first element of Linked List at an index of Hash Table */
 
 	S_symbol* tail;
 	/* tail pointing the last element of Linked List at an index of Hash Table */
-};
+}S_arraySymbol;
 
 //instruction counter
 int IC;
