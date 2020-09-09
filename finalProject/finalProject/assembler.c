@@ -1,7 +1,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "structures.h"
 #include "validation.h"
 #include "manageInstruction.h"
 #include "manageDirective.h"

@@ -280,6 +280,7 @@ int f_checkIsValidInstantR(char** pointoRow, int numRow, int numOperand)
 	}
 	return 0;
 }//check direct and indirect residence for register or label(4 methods)
+
 int f_checkIsValidDirectInDirectR(char* row, int numOperand, int numRow)
 {
 	char* label;
@@ -360,6 +361,7 @@ int f_checkIsValidInstruction(char* row, int numRow)
 	int numOfOperands;
 	int numCommand;
 	numCommand = f_checkIsValidCommand(row, numRow);
+	//if it is not valid command
 	if (numCommand == -1)
 		return 0;
 	//row point just after the command
@@ -369,7 +371,7 @@ int f_checkIsValidInstruction(char* row, int numRow)
 	{
 		return 1;
 	}
-	if (*row != ' ' || *row != '\t')
+	if ((*row) != ' ' && (*row) != '\t')
 	{
 		printf("Error!, in row %d, must have spasce near the command", numRow);
 	}
@@ -468,17 +470,13 @@ int f_checkIsValidInstruction(char* row, int numRow)
 	return 0;
 }
 
-
-
-
-
 //check the statment if it is valid and which statment is it
 //row point to the first letter in the row
 int f_checkStatment(char* row, int numRow, char** isLabelInRow)
 {
 	//hold the num of the command
 	int numCommand;
-	int status=0;
+	int status = 0;
 	//null -if the label not valid
 	char* isValidLabel = NULL;
 	//help pointer in row

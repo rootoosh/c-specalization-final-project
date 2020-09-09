@@ -1,11 +1,10 @@
-#include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-#include "structures.h"
 #include "commandsData.h"
 #include "symbolsHash.h"
 
+extern int IC;
 //get string and check is it register or label operand. in the nameOp put the name nice with \n
 int f_checkRegistOrLabel(char* row, char** nameOp)
 {
@@ -189,7 +188,6 @@ void f_manageInstandResidence(char* row, S_nodeInstruction* node, int serialOper
 	//but note not to put anything in the firstOperand and Second operand parameters
 	*/
 }
-
 
 void f_putLabelInNode(char* label, S_nodeInstruction* node, int serialOperand)
 {

@@ -1,9 +1,5 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
+
 #include "structures.h"
-#include "commandsData.h"
-#include "symbolsHash.h"
 
 //get string and check is it register or label operand. in the nameOp put the name nice with \n
 int f_checkRegistOrLabel(char* row, char** nameOp);

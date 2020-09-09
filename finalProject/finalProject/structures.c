@@ -1,4 +1,21 @@
 #include "structures.h"
+#include <stdio.h>
+//gloabel variables
+
+//instruction counter-
+ int IC = 0;
+//data counter
+int DC = 0;
+
+//static variables
+
+//the list of instriction :1 pointer as head. 1 pointer as tail
+struct nodeI* headInstrucionList = NULL;
+struct nodeI* tailInstrucionList;
+//the list of data: 1 pointer as 
+struct nodeD* headDataList = NULL;
+struct nodeD* tailDataList;
+
 
 S_nodeInstruction* f_insertInstruction()
 {
@@ -20,14 +37,27 @@ S_nodeInstruction* f_insertInstruction()
 	}
 	return newNode;
 }
-
-void initList()
+S_nodeData* f_insertDirective()
 {
-	//the list of data: 1 pointer as head, 1 pointer as tail
-	headDataList = (struct nodeD*)malloc(sizeof(struct nodeD));
-	tailDataList = headDataList;
-
+	struct nodeD* newNode = (struct nodeD*)malloc(sizeof(struct nodeD));
+	newNode->address = DC;
+	newNode->binaryCode = 0;
+	newNode->label = NULL;
+	newNode->type = NULL;
+	newNode->next = NULL;
+	if (headDataList == NULL)
+	{
+		headDataList = newNode;
+		tailDataList = headInstrucionList;
+	}
+	else
+	{
+		tailDataList->next = newNode;
+		tailDataList = tailDataList->next;
+	}
+	return newNode;
 }
+
 
 void freeList()
 {

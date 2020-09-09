@@ -1,7 +1,4 @@
 
-#include <stdio.h>
-#include "structures.h"
-
 char* f_ingnoreSpaces(char* string)
 {
 	while ((*string == ' ') || (*string == '\t'))

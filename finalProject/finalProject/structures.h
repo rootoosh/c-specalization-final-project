@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 
 #ifndef _STRUCT_H_
 #define _STRUCT_H_
@@ -68,25 +66,13 @@ typedef struct symbol
 	/* tail pointing the last element of Linked List at an index of Hash Table */
 }S_arraySymbol;
 
-//instruction counter
-int IC=0;
-//data counter
-int DC=0;
 
-//the list of instriction :1 pointer as head. 1 pointer as tail
-
-struct nodeI* headInstrucionList=NULL;
-struct nodeI* tailInstrucionList;
-//the list of data: 1 pointer as 
-struct nodeD* headDataList=NULL;
-struct nodeD* tailDataList;
 
 //prototype of helpers function for all sulotion-helpers.c
 char* f_ingnoreSpaces(char* string);
 
 //prototype of initilize function-structures.c
-void initList();
-
+struct nodeD* f_insertDirective();
 struct nodeI* f_insertInstruction();
 
 void freeList();

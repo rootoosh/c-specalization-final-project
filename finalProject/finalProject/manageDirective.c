@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include "structures.h"
 #include "symbolsHash.h"
 
-
+extern int DC;
 //initialize DataNode for .data directive
 void f_initializeDataNode(struct nodeD* node, int num)
 {
@@ -72,11 +71,7 @@ void f_manageData(char* row, S_nodeData* node)
 		}
 		else
 		{
-			newNode = (struct nodeD*)malloc(sizeof(struct nodeD));
-			//connect the new node to the llist
-			tailDataList->next = newNode;
-			newNode->next = NULL;
-			tailDataList = newNode;
+			newNode = f_insertDirective();
 			//initialize the new node in the S_nodeData struct
 			f_initializeDataNode(newNode, num);
 			//inc the data counter
@@ -128,11 +123,7 @@ void f_manageString(char* row, S_nodeData* node)
 	while (*row != '"')
 	{
 		//create new node
-		newNode = (struct nodeD*)malloc(sizeof(struct nodeD));
-		//connect the new node to the llist
-		tailDataList->next = newNode;
-		newNode->next = NULL;
-		tailDataList = newNode;
+		newNode = f_insertDirective();
 		//ch- hold the assci code of the sign
 		ch = *row;
 		//initialize the new node in the S_nodeData struct
@@ -144,11 +135,7 @@ void f_manageString(char* row, S_nodeData* node)
 	}
 	//treat the node of the \0 char.
 	// create new node
-	newNode = (S_nodeData*)malloc(sizeof(S_nodeData));
-	//connect the new node to the llist
-	tailDataList->next = newNode;
-	newNode->next = NULL;
-	tailDataList = newNode;
+	newNode = f_insertDirective();
 	//initialize the new node in the S_nodeData struct
 	f_initializeStringNode(0, newNode);
 	//inc the data counter
@@ -187,11 +174,7 @@ void f_manageDirective(char* row, char* isLabel)
 	else
 	{
 		//the new node struct
-		newNode = (struct nodeD*)malloc(sizeof(struct nodeD));
-		//connect the new node to the llist
-		newNode->next = NULL;
-		tailDataList->next = newNode;
-		tailDataList = newNode;
+		newNode = f_insertDirective();
 		//copy the address to the node data struct from DC
 		newNode->address = DC;
 		//inc the Data counter

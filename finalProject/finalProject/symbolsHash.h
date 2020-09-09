@@ -1,6 +1,4 @@
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "structures.h"
 
 //this functioin get detalis of label and insert into S_symbol struct
@@ -15,14 +13,12 @@ int f_hashCode(char* label);
 //and puts it in the hash table and disconnects it from the list 
 void f_convertFromListToHash();
 
-struct  symbol* search(char* key);
+struct symbol* search(char* key);
 
 ////get label and scope and modity the scope of the label in the hash symbols table
 void f_updateScopeLabel(char* label, E_scopeLabel scope);
 
 void f_modifyLabel(char* row, E_scopeLabel scope);
 
-struct symbol* headSymbolList=NULL;
-struct symbol* tailSymbolList;
 
 

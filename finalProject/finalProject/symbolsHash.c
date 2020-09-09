@@ -3,11 +3,14 @@
 #include <string.h>
 #include <math.h>
 #include "structures.h"
-#include "symbolsHash.h"
+
+//static viriables
 
 //count the number of the node in the list
 int sizeList = 0;
-
+//pointers to the list
+struct symbol* headSymbolList = NULL;
+struct symbol* tailSymbolList;
 S_arraySymbol* hashTabel;
 
 //this functioin get detalis of label and insert into S_symbol struct
