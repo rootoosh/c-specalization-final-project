@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include "structures.h"
+#include "symbolsHash.h"
 
 //static viriables
 
@@ -91,7 +92,8 @@ void f_convertFromListToHash()
 	ptr = headSymbolList;
 }
 
-struct  symbol* search(char* key) {
+struct  symbol* search(char* key) 
+{
 
 	//get the hash 
 	int hashIndex = f_hashCode(key);

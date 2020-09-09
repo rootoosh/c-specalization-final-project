@@ -3,6 +3,7 @@
 #include <string.h>
 #include "commandsData.h"
 #include "symbolsHash.h"
+#include "manageInstruction.h"
 
 extern int IC;
 //get string and check is it register or label operand. in the nameOp put the name nice with \n

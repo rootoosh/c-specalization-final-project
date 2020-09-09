@@ -1,5 +1,5 @@
 #include "structures.h"
-
+#include "commandsData.h"
 //make array that represent all the commands that valid in assembly
 S_command cammoandTable[16]=
 {

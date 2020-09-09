@@ -4,7 +4,7 @@
 #include "validation.h"
 #include "manageInstruction.h"
 #include "manageDirective.h"
-
+#include "assembler.h"
 //function to read row, check is valid, 
 //put in the suitable structure
 void f_assembleFirstPass(FILE* inputFile)
