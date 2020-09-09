@@ -1,236 +1,32 @@
 ﻿  assembler.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,16): error C2365: 'local': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,21): error C2086: 'local': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,23): error C2365: 'entry': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,28): error C2086: '<unnamed-enum-local> entry': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,30): error C2365: 'external': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,39): error C2086: '<unnamed-enum-local> external': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,16): error C2365: 'data': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,20): error C2086: 'data': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,34): error C2086: '<unnamed-enum-data> instruction': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(36,1): error C2011: 'nodeD': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(35): message : see declaration of 'nodeD'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69,5): error C2374: 'IC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69): message : see declaration of 'IC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71,5): error C2374: 'DC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71): message : see declaration of 'DC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75,15): error C2374: 'headInstrucionList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75): message : see declaration of 'headInstrucionList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78,15): error C2374: 'headDataList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78): message : see declaration of 'headDataList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97,2): error C2371: 'S_command': redefinition; different basic types
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97): message : see declaration of 'S_command'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,16): error C2365: 'local': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,21): error C2086: 'local': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,23): error C2365: 'entry': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,28): error C2086: '<unnamed-enum-local> entry': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,30): error C2365: 'external': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,39): error C2086: '<unnamed-enum-local> external': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,16): error C2365: 'data': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,20): error C2086: 'data': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,34): error C2086: '<unnamed-enum-data> instruction': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(36,1): error C2011: 'nodeD': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(35): message : see declaration of 'nodeD'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69,5): error C2374: 'IC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69): message : see declaration of 'IC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71,5): error C2374: 'DC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71): message : see declaration of 'DC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75,15): error C2374: 'headInstrucionList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75): message : see declaration of 'headInstrucionList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78,15): error C2374: 'headDataList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78): message : see declaration of 'headDataList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97,2): error C2371: 'S_command': redefinition; different basic types
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97): message : see declaration of 'S_command'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,16): error C2365: 'local': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,21): error C2086: 'local': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,23): error C2365: 'entry': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,28): error C2086: '<unnamed-enum-local> entry': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,30): error C2365: 'external': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,39): error C2086: '<unnamed-enum-local> external': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,16): error C2365: 'data': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,20): error C2086: 'data': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,34): error C2086: '<unnamed-enum-data> instruction': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(36,1): error C2011: 'nodeD': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(35): message : see declaration of 'nodeD'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69,5): error C2374: 'IC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69): message : see declaration of 'IC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71,5): error C2374: 'DC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71): message : see declaration of 'DC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75,15): error C2374: 'headInstrucionList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75): message : see declaration of 'headInstrucionList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78,15): error C2374: 'headDataList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78): message : see declaration of 'headDataList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97,2): error C2371: 'S_command': redefinition; different basic types
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97): message : see declaration of 'S_command'
 C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\assembler.c(25,23): warning C4013: 'getline' undefined; assuming extern returning int
-  commandsData.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-  manageDirective.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,16): error C2365: 'local': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,21): error C2086: 'local': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'local'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,23): error C2365: 'entry': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,28): error C2086: '<unnamed-enum-local> entry': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'entry'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,30): error C2365: 'external': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4,39): error C2086: '<unnamed-enum-local> external': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(4): message : see declaration of 'external'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,16): error C2365: 'data': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,20): error C2086: 'data': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'data'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,22): error C2365: 'instruction': redefinition; previous definition was 'enumerator'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5,34): error C2086: '<unnamed-enum-data> instruction': redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(5): message : see declaration of 'instruction'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(22,1): error C2011: 'nodeI': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(21): message : see declaration of 'nodeI'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(36,1): error C2011: 'nodeD': 'struct' type redefinition
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(35): message : see declaration of 'nodeD'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69,5): error C2374: 'IC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(69): message : see declaration of 'IC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71,5): error C2374: 'DC': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(71): message : see declaration of 'DC'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75,15): error C2374: 'headInstrucionList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(75): message : see declaration of 'headInstrucionList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78,15): error C2374: 'headDataList': redefinition; multiple initialization
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(78): message : see declaration of 'headDataList'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97,2): error C2371: 'S_command': redefinition; different basic types
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(97): message : see declaration of 'S_command'
-  structures.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
   main.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
 C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\main.c(20,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  symbolsHash.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(55,2): error C2061: syntax error: identifier 'symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(56,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(61,2): error C2061: syntax error: identifier 'S_symbol'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(64,10): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\structures.h(66,1): error C2059: syntax error: '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(10,9): error C2143: syntax error: missing '{' before '*'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(15,14): error C2065: 'hashSymbols': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(15,25): error C2065: 'S_symbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(15,27): error C2059: syntax error: ')'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(25,26): warning C4244: '+=': conversion from 'double' to 'unsigned int', possible loss of data
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(35,18): error C2065: 'hashArray': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(35,28): error C2109: subscript requires array or pointer type
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(37,16): error C2065: 'hashArray': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(37,26): error C2109: subscript requires array or pointer type
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(38,20): error C2065: 'hashArray': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(38,30): error C2109: subscript requires array or pointer type
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(38,31): warning C4033: 'search' must return a value
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(53,10): error C2065: 'S_symbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(53,22): error C2065: 'newSymbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(53,33): error C2065: 'S_symbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(53,34): error C2059: syntax error: ')'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(54,11): error C2065: 'newSymbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(54,13): error C2223: left of '->address' must point to struct/union
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(55,11): error C2065: 'newSymbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(55,13): error C2223: left of '->label' must point to struct/union
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(56,11): error C2065: 'newSymbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(56,13): error C2223: left of '->type' must point to struct/union
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(57,11): error C2065: 'newSymbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(57,13): error C2223: left of '->next' must point to struct/union
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(61,10): error C2065: 'S_symbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(61,17): error C2065: 'list': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(61,28): error C2065: 's_symbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(61,29): error C2059: syntax error: ')'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(63,10): error C2065: 'S_symbol': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(63,20): error C2065: 'pointer': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(63,22): error C2059: syntax error: ';'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(65,17): error C2065: 'pointer': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(65,24): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(67,11): error C2065: 'pointer': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(67,20): error C2065: 'pointer': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(67,22): error C2223: left of '->next' must point to struct/union
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(70,9): error C2065: 'pointer': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(71,1): error C2065: 'newSy': undeclared identifier
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(71,1): error C2143: syntax error: missing ';' before '}'
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(185,1): error C2084: function 'void f_insertLabel(char *,E_typeLabel,int)' already has a body
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\symbolsHash.c(51): message : see previous definition of 'f_insertLabel'
   Generating Code...
+  commandsData.h
+Debug\commandsData.obj : warning LNK4042: object specified more than once; extras ignored
+manageDirective.obj : error LNK2005: _IC already defined in assembler.obj
+manageDirective.obj : error LNK2005: _DC already defined in assembler.obj
+manageDirective.obj : error LNK2005: _headInstrucionList already defined in assembler.obj
+manageDirective.obj : error LNK2005: _headDataList already defined in assembler.obj
+manageDirective.obj : error LNK2005: _headSymbolList already defined in assembler.obj
+Debug\assembler.obj : warning LNK4042: object specified more than once; extras ignored
+structures.obj : error LNK2005: _IC already defined in assembler.obj
+structures.obj : error LNK2005: _DC already defined in assembler.obj
+structures.obj : error LNK2005: _headInstrucionList already defined in assembler.obj
+structures.obj : error LNK2005: _headDataList already defined in assembler.obj
+Debug\structures.obj : warning LNK4042: object specified more than once; extras ignored
+main.obj : error LNK2005: _IC already defined in assembler.obj
+main.obj : error LNK2005: _DC already defined in assembler.obj
+main.obj : error LNK2005: _headInstrucionList already defined in assembler.obj
+main.obj : error LNK2005: _headDataList already defined in assembler.obj
+symbolsHash.obj : error LNK2005: _IC already defined in assembler.obj
+symbolsHash.obj : error LNK2005: _DC already defined in assembler.obj
+symbolsHash.obj : error LNK2005: _headInstrucionList already defined in assembler.obj
+symbolsHash.obj : error LNK2005: _headDataList already defined in assembler.obj
+symbolsHash.obj : error LNK2005: _headSymbolList already defined in assembler.obj
+assembler.obj : error LNK2019: unresolved external symbol _f_checkIsValidRow referenced in function _f_assembleFirstPass
+assembler.obj : error LNK2019: unresolved external symbol _f_manamgeInstruction referenced in function _f_assembleFirstPass
+assembler.obj : error LNK2019: unresolved external symbol _getline referenced in function _f_assembleFirstPass
+symbolsHash.obj : error LNK2019: unresolved external symbol _hashcode referenced in function _f_convertFromListToHash
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\Debug\finalProject.exe : fatal error LNK1120: 4 unresolved externals

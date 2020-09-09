@@ -1,5 +1,8 @@
 
 
+
+
+
 //the num that represent the command is the index of that command in the commandTable
 int f_getNumCommand(char commandStr[3]);
 

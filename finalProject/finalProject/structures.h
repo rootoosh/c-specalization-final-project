@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef _STRUCT_H_
+#define _STRUCT_H_
+
 typedef enum { local, entry, external } E_scopeLabel;
 typedef enum { data, instruction }E_typeLabel;
 
@@ -52,16 +55,16 @@ typedef struct symbol
 	int address;
 	E_scopeLabel scope; //0- local 1- entry  2- extrnal
 	E_typeLabel type; //instruction or data
-	symbol* next;
+	struct symbol* next;
 }S_symbol;
 
 
  typedef struct arraySymbol
 {
-	S_symbol* head;
+	struct symbol* head;
 	/* head pointing the first element of Linked List at an index of Hash Table */
 
-	S_symbol* tail;
+	struct symbol* tail;
 	/* tail pointing the last element of Linked List at an index of Hash Table */
 }S_arraySymbol;
 
@@ -83,7 +86,10 @@ char* f_ingnoreSpaces(char* string);
 
 //prototype of initilize function-structures.c
 void initList();
+
 struct nodeI* f_insertInstruction();
+
+void freeList();
 
 typedef struct
 {
@@ -104,3 +110,4 @@ need functino to initilize comandTable
 need fucntion to firstCycleîòáø øàùåï and fill all
 that possible:
  */
+#endif

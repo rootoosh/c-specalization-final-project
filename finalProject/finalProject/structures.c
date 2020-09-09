@@ -21,14 +21,12 @@ S_nodeInstruction* f_insertInstruction()
 	return newNode;
 }
 
-
 void initList()
 {
 		//the list of data: 1 pointer as head, 1 pointer as tail
 	headDataList = (struct nodeD*)malloc(sizeof(struct nodeD));
 	tailDataList = headDataList;
-	IC = 0;
-	DC = 0;
+
 }
 
 void freeList()

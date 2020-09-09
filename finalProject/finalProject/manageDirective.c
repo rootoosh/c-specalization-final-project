@@ -162,7 +162,7 @@ void f_manageDirective(char* row, char* isLabel)
 	// if has- send to function:insertlabel
 	if (isLabel != NULL)
 	{
-		f_insertLabel(isLabel, data);
+		f_insertLabel(isLabel, data,DC);
 		//row point after ther label
 		row += strlen(isLabel) + 1;
 	}
