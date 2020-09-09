@@ -1,4 +1,17 @@
-﻿  main.c
+﻿  assembler.c
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\assembler.c(19,27): warning C4013: 'malloc' undefined; assuming extern returning int
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\assembler.c(23,23): warning C4013: 'getline' undefined; assuming extern returning int
+  main.c
+  manageDirective.c
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\manageDirective.c(65,13): warning C4013: 'atoi' undefined; assuming extern returning int
+  symbolsHash.c
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(58,26): warning C4244: '+=': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(75,9): warning C4033: 'f_convertFromListToHash' must return a value
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(80,19): warning C4013: 'hashcode' undefined; assuming extern returning int
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(171,38): warning C4047: 'function': 'int' differs in levels of indirection from 'void *'
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(171,38): warning C4024: 'f_insertLabel': different types for formal and actual parameter 4
+  Generating Code...
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(130): warning C4715: 'f_convertFromListToHash': not all control paths return a value
 Debug\commandsData.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\assembler.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\structures.obj : warning LNK4042: object specified more than once; extras ignored

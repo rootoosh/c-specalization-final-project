@@ -7,7 +7,7 @@
 #include "assembler.h"
 //function to read row, check is valid, 
 //put in the suitable structure
-void f_assembleFirstPass(FILE* inputFile)
+int f_assembleFirstPass(FILE* inputFile)
 {
 	int hasError = 0;
 	//has label in that row or not
@@ -55,6 +55,7 @@ void f_assembleFirstPass(FILE* inputFile)
 		//inc the row number
 		rowNum++;
 	}
+	return hasError;
 }
 
 /*

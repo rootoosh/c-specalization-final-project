@@ -7,7 +7,6 @@
 #include "structures.h"
 
 
-int  hasError = 0;
 int f_checkIsValidCommand(char* row, int numRow)
 {
 	int isValidComand;

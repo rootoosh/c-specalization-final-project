@@ -5,6 +5,7 @@
 #include "structures.h"
 #include "symbolsHash.h"
 
+
 //static viriables
 
 //count the number of the node in the list
@@ -61,37 +62,73 @@ int f_hashCode(char* label)
 
 //this function Take each node from the list S_symbol
 //and puts it in the hash table and disconnects it from the list 
-void f_convertFromListToHash()
+int f_convertFromListToHash()
 {
+	int hasError = 0;
 	//pointer to the symbol list
 	struct symbol* ptr;
+	struct symbol* hasThatSymb;
 	ptr= headSymbolList;
 	int index;
-
-	while (ptr->next != NULL)
+	if (ptr == NULL)
+	{
+		return;
+	}
+	while (ptr != NULL)
 	{
 		//give the index in the hash tabel for this label 
 		index = hashcode(ptr->label);
-
+		hasThatSymb = search(ptr->label);
+		//if not have that symbol already
+		if(hasThatSymb==NULL)
+		{
+			//for the first node in that index
 		if (!(hashTabel[index].head))
 		{
 			hashTabel[index].head = ptr;
 		}
+		//for other nodes
 		else
 		{
 			hashTabel[index].tail->next = ptr;
+			
 		}
-		headSymbolList = headSymbolList->next;
-		ptr->next = NULL;
 		hashTabel[index].tail = ptr;
+		//remove the node from the symbol list
+		ptr->next = NULL;
+		//the symbol list now not conation this symbol
+		headSymbolList = headSymbolList->next;
+		}
+		//that symbol already exist
+		else
+		{
+			//modify local to entry
+			if ((hasThatSymb->scope == local) && (ptr->scope == entry))
+			{
+				hasThatSymb->scope = entry;
+			}
+			//modify entry with his address
+			else if((hasThatSymb->scope==entry) && (ptr->scope==local))
+			{
+				hasThatSymb->address = ptr->address;
+			}
+			//if put twice entry or twice extern for the same label is not error. else is error
+			else if (!((hasThatSymb->scope == ptr->scope) && (ptr->scope != local)))
+			{
+				hasError = 1;
+				printf("there is eror with the scope of the label %s. maby you put conflict scope or the same label twice", ptr->label);
+			}
+			ptr->next = NULL;
+			headSymbolList = headSymbolList->next;
+			free(ptr);
+		}
+		
+		//for the next iteration
 		ptr = headSymbolList;
 	}
-	//insert the last node into the hash tabel
-	hashTabel[index].tail->next = ptr;
-	hashTabel[index].tail = ptr;
-	ptr = headSymbolList;
+	return hasError;
 }
-
+//return only pinter to node in hash table. not new copy
 struct  symbol* search(char* key) 
 {
 
@@ -103,7 +140,7 @@ struct  symbol* search(char* key)
 	while (ptr)
 	{
 		//check if the label name equal to the key  
-		if (ptr->label == key)
+		if (strcmp(ptr->label,key))
 		{
 			return ptr;
 		}
@@ -111,91 +148,7 @@ struct  symbol* search(char* key)
 	return NULL;
 }
 
-//the function get label and type and insert it to the symbols table
-//void f_insertLabel(char* label, E_typeLabel type, int address)
-//{
-//	S_symbol* newSymbol = (S_symbol*)malloc(sizeof(S_symbol));
-//	newSymbol->address = address;
-//	newSymbol->label = label;
-//	newSymbol->type = type;
-//	newSymbol->next = NULL;
-//	//get the hash 
-//	int hashIndex = f_hashCode(label);
-//
-//	S_symbol* list = (s_symbol*)hashSymbols[hashIndex].head;
-//	//move with pointer
-//	S_symbol* pointer = ;
-//	//move in array until an empty cell
-//	while (pointer != NULL)
-//	{
-//		pointer = pointer->next;
-//	}
-//
-//	pointer = newSy
-//}
-//
-//void insert(int key, int value)
-//{
-//	float n = 0.0;
-//	/* n => Load Factor, keeps check on whether rehashing is required or not */
-//
-//	int index = hashcode(key);
-//
-//	/* Extracting Linked List at a given index */
-//	struct s_symbol* list = (s_symbol*)hashSymbols[index].head;
-//
-//	/* Creating an item to insert in the Hash Table */
-//	struct node* item = (struct node*)malloc(sizeof(struct node));
-//	item->key = key;
-//	item->value = value;
-//	item->next = NULL;
-//
-//	if (list == NULL)
-//	{
-//		/* Absence of Linked List at a given Index of Hash Table */
-//
-//		printf("Inserting %d(key) and %d(value) \n", key, value);
-//		array[index].head = item;
-//		array[index].tail = item;
-//		size++;
-//
-//	}
-//	else
-//	{
-//		/* A Linked List is present at given index of Hash Table */
-//
-//		int find_index = find(list, key);
-//		if (find_index == -1)
-//		{
-//			/*
-//			 *Key not found in existing linked list
-//			 *Adding the key at the end of the linked list
-//			*/
-//
-//			array[index].tail->next = item;
-//			array[index].tail = item;
-//			size++;
-//
-//		}
-//		else
-//		{
-//			/*
-//			 *Key already present in linked list
-//			 *Updating the value of already existing key
-//			*/
-//
-//			struct node* element = get_element(list, find_index);
-//			element->value = value;
-//
-//		}
-//
-//	}
-	
-////get label and scope and modity the scope of the label in the hash symbols table
-void f_updateScopeLabel(char* label, E_scopeLabel scope)
-{
 
-}
 
 void f_modifyLabel(char* row,E_typeLabel type, E_scopeLabel scope)
 {
