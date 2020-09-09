@@ -72,7 +72,7 @@ typedef struct symbol
 char* f_ingnoreSpaces(char* string);
 
 //prototype of initilize function-structures.c
-struct nodeD* f_insertDirective();
+S_nodeData* f_insertDirective();
 struct nodeI* f_insertInstruction();
 
 void freeList();

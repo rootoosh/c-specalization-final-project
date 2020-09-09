@@ -99,7 +99,7 @@ char* f_checkIsValidLabel(char* row, int numRow)
 	{
 		return NULL;
 	}
-	while ((isalpha(*ptr) || isdigit(*ptr)) && (*ptr))
+	while ((*ptr) &&(isalpha(*ptr) || isdigit(*ptr)) )
 	{
 		if (count > 30)
 		{

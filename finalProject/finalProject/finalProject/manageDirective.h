@@ -1,3 +1,7 @@
+#ifndef manageD
+#define manageD
+
+
 #include "structures.h"
 
 //initialize DataNode for .data directive
@@ -13,3 +17,4 @@ void f_manageString(char* row, S_nodeData* node);
 
 
 void f_manageDirective(char* row, char* isLabel);
+#endif // !manageD

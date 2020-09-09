@@ -1,3 +1,6 @@
+#ifndef manageI
+#define manageI
+
 
 #include "structures.h"
 
@@ -20,3 +23,4 @@ void f_instrct1operand(char* row, S_nodeInstruction* newNode);
 
 //deal with the instruction list,
 void f_manamgeInstruction(char* row, char* isLabel);
+#endif // !manageI
