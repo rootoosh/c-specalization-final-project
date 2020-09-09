@@ -24,10 +24,8 @@ int main(int argc,char **argv)
 		}
 		initList();
 
-
-		//int n=countrows(inputFile)
-		//allocate hashForSymbol(n)
 		//f_assembleFirstPass(inputFile,listData,listInstrucion);
+		//allocate hashForSymbol(n)
 		//f_assenmbleSecondPass(inputFile,listDAta,listInstruction)
 		//f_assemble
 		if (fclose(inputFile) != 0)

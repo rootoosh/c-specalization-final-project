@@ -1,10 +1,4 @@
-﻿  assembler.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\assembler.c(25,23): warning C4013: 'getline' undefined; assuming extern returning int
-  main.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\main.c(20,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Generating Code...
-  commandsData.h
-Debug\commandsData.obj : warning LNK4042: object specified more than once; extras ignored
+﻿Debug\commandsData.obj : warning LNK4042: object specified more than once; extras ignored
 manageDirective.obj : error LNK2005: _IC already defined in assembler.obj
 manageDirective.obj : error LNK2005: _DC already defined in assembler.obj
 manageDirective.obj : error LNK2005: _headInstrucionList already defined in assembler.obj

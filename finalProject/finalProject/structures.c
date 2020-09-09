@@ -23,7 +23,7 @@ S_nodeInstruction* f_insertInstruction()
 
 void initList()
 {
-		//the list of data: 1 pointer as head, 1 pointer as tail
+	//the list of data: 1 pointer as head, 1 pointer as tail
 	headDataList = (struct nodeD*)malloc(sizeof(struct nodeD));
 	tailDataList = headDataList;
 

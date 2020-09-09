@@ -18,8 +18,7 @@ void f_assembleFirstPass(FILE* inputFile)
 	int len = 0;
 	size_t rowLength;
 	char* row = (char*)malloc(sizeof(char));
-	//is had error(0) in the row or:
-	 // is it insturction(1) or data(2).
+	//is has error(0) in the row or:  is it insturction(1) or data(2).
 	int status;
 	//while there are rows in the file
 	while ((len = getline(&row, &rowLength, inputFile)) != 0)
@@ -38,12 +37,12 @@ void f_assembleFirstPass(FILE* inputFile)
 				//chcek if the row is valid, and is it data or instructio
 				status = f_checkIsValidRow(row, rowNum, &isLabelInRow);
 				//status =1 mean is instrucion
-				if ((status == 1)&&(!hasError))
+				if ((status == 1) && (!hasError))
 				{
 					f_manamgeInstruction(row, isLabelInRow);
 				}
 				//status =2 mean is data instruction
-				else if ((status == 2) &&(!hasError))
+				else if ((status == 2) && (!hasError))
 				{
 					f_manageDirective(row, isLabelInRow);
 				}
@@ -72,7 +71,7 @@ second pass
 in the second pass we shuold check all the nodes:
 if the field "first operand" or "secondOperand "
 not null- we shuld do something
-for lebels should manage address 
+for lebels should manage address
 4.write output files
 5.  free alocation memory
 */

@@ -92,6 +92,7 @@ char* f_checkIsValidLabel(char* row, int numRow)
 	row = f_ingnoreSpaces(row);
 	//help pointer in row string
 	char* ptr = row;
+	//count the length of the label name
 	int count = 1;
 
 	if (!isalpha(*ptr))
@@ -477,14 +478,14 @@ int f_checkStatment(char* row, int numRow, char** isLabelInRow)
 {
 	//hold the num of the command
 	int numCommand;
-	int status;
+	int status=0;
 	//null -if the label not valid
 	char* isValidLabel = NULL;
 	//help pointer in row
 	char* ptr = row;
 	//check if there is a lable 
 	ptr = strchr(row, ':');
-	//if there is a lable
+	//if there is a lable- find ':'
 	if (ptr != NULL)
 	{   //check if it is valid lable
 		*ptr = '\0';
@@ -518,11 +519,11 @@ int f_checkStatment(char* row, int numRow, char** isLabelInRow)
 	return status;
 }
 
-//fucntion to check the validion of the row, get row, num row for print error with the num
+//fucntion to check the validion of the row, get row, num row for print error with the numRow
 //and get pointer to string for returning the label
 //must return label without ':'- put /0 in place of :
-//status =0 mean error. =1 mean is insturcion. =2 mean is directivve 3-mean itis comment or empty row
-//שורה ריקה היא לא ולידית כלומר לא חוקית וגם שורת הערה
+//status =0 mean error. =1 mean is insturcion. =2 mean is directivve
+//3-mean itis comment or empty row
 int f_checkIsValidRow(char* row, int numRow, char** isLabelInRow)
 {
 	//hold the status of the row
