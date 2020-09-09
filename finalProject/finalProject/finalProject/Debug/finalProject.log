@@ -1,15 +1,10 @@
-﻿  assembler.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\assembler.c(19,27): warning C4013: 'malloc' undefined; assuming extern returning int
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\assembler.c(23,23): warning C4013: 'getline' undefined; assuming extern returning int
-  main.c
-  manageDirective.c
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\manageDirective.c(64,13): warning C4013: 'atoi' undefined; assuming extern returning int
-  Generating Code...
+﻿  symbolsHash.c
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(57,26): warning C4244: '+=': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\symbolsHash.c(75,19): warning C4013: 'hashcode' undefined; assuming extern returning int
 Debug\commandsData.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\assembler.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\structures.obj : warning LNK4042: object specified more than once; extras ignored
-assembler.obj : error LNK2019: unresolved external symbol _f_checkIsValidRow referenced in function _f_assembleFirstPass
-assembler.obj : error LNK2019: unresolved external symbol _f_manamgeInstruction referenced in function _f_assembleFirstPass
-assembler.obj : error LNK2019: unresolved external symbol _getline referenced in function _f_assembleFirstPass
+manageDirective.obj : error LNK2019: unresolved external symbol _f_insertDirective referenced in function _f_manageData
+manageDirective.obj : error LNK2001: unresolved external symbol _DC
 symbolsHash.obj : error LNK2019: unresolved external symbol _hashcode referenced in function _f_convertFromListToHash
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\Debug\finalProject.exe : fatal error LNK1120: 4 unresolved externals
+C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\finalProject\Debug\finalProject.exe : fatal error LNK1120: 3 unresolved externals

@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include "structures.h"
+#include "symbolsHash.h"
 
 //static viriables
 
@@ -66,7 +67,7 @@ void f_convertFromListToHash()
 	struct symbol* ptr;
 	ptr= headSymbolList;
 
-	int index;
+	int index=0;
 
 	while (ptr->next != NULL)
 	{

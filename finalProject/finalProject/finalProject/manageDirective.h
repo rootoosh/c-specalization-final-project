@@ -11,5 +11,8 @@ void f_initializeStringNode(int ch, S_nodeData* node);
 
 void f_manageString(char* row, S_nodeData* node);
 
-
 void f_manageDirective(char* row, char* isLabel);
+
+//S_nodeData* f_insertDirective();
+
+

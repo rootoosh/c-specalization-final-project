@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include "manageDirective.h"
 #include "structures.h"
 #include "symbolsHash.h"
 

@@ -7,7 +7,7 @@ int main(int argc,char **argv)
 {
 	if (argc < 2)
 	{
-		perror("the program didnt get file to manipulate");
+		perror("the program didnt get file to manipulate");  
 	}
 	else
 	{

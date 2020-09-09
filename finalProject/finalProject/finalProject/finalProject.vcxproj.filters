@@ -21,9 +21,6 @@
     <ClCompile Include="assembler.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="commandsData.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="symbolsHash.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,6 +37,9 @@
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="structures.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commandsData.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
