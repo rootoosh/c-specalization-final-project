@@ -1,8 +1,0 @@
-﻿Debug\commandsData.obj : warning LNK4042: object specified more than once; extras ignored
-Debug\assembler.obj : warning LNK4042: object specified more than once; extras ignored
-Debug\structures.obj : warning LNK4042: object specified more than once; extras ignored
-assembler.obj : error LNK2019: unresolved external symbol _f_checkIsValidRow referenced in function _f_assembleFirstPass
-assembler.obj : error LNK2019: unresolved external symbol _f_manamgeInstruction referenced in function _f_assembleFirstPass
-assembler.obj : error LNK2019: unresolved external symbol _getline referenced in function _f_assembleFirstPass
-symbolsHash.obj : error LNK2019: unresolved external symbol _hashcode referenced in function _f_convertFromListToHash
-C:\Users\מחשב לכל ילד\Documents\GitHub\c-specalization-final-project\finalProject\finalProject\Debug\finalProject.exe : fatal error LNK1120: 4 unresolved externals
