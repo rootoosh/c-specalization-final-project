@@ -1,4 +1,5 @@
-
+#ifndef Validation
+#define Validation
 
 int f_checkIsValidCommand(char* row, int numRow);
 
@@ -34,3 +35,4 @@ int f_checkStatment(char* row, int numRow, char** isLabelInRow);
 //שורה ריקה היא לא ולידית כלומר לא חוקית וגם שורת הערה
 
 int f_checkIsValidRow(char* row, int numRow, char** isLabelInRow);
+#endif

@@ -3,7 +3,6 @@
 #include <string.h>
 #include <math.h>
 #include "structures.h"
-#include "symbolsHash.h"
 
 //static viriables
 
@@ -15,7 +14,7 @@ struct symbol* tailSymbolList;
 S_arraySymbol* hashTabel;
 
 //this functioin get detalis of label and insert into S_symbol struct
-void f_insertLabel(char* label, E_typeLabel type, int address)
+void f_insertLabel(char* label, E_typeLabel type,E_scopeLabel scope, int address)
 {
 	//create new node and initialization
 	struct symbol* newNode = (struct symbol*)malloc(sizeof(struct symbol));
@@ -66,8 +65,7 @@ void f_convertFromListToHash()
 	//pointer to the symbol list
 	struct symbol* ptr;
 	ptr= headSymbolList;
-
-	int index=0;
+	int index;
 
 	while (ptr->next != NULL)
 	{
@@ -197,11 +195,25 @@ void f_updateScopeLabel(char* label, E_scopeLabel scope)
 
 }
 
-void f_modifyLabel(char* row, E_scopeLabel scope)
+void f_modifyLabel(char* row,E_typeLabel type, E_scopeLabel scope)
 {
 	//the row point to the word:entry or:extern
 	//note yoou souhuld find space and after him- the label to midify. cut it and
 	//send to "updateScopeLabel(char * label,E_scopeLabel scope)"
+	char* ptr;
+	ptr = strchr(row, ' ');
+	if (!ptr)
+	{
+		ptr = strchr(row, '\t');
+	}
+	row = f_ingnoreSpaces(ptr);
+	ptr = row;
+	while ((*ptr) && (*ptr != ' ') && (*ptr != '\t') && (*ptr != '\n'))
+	{
+		ptr++;
+	}
+	*ptr = '\0';
+	f_insertLabel(row, type, scope, NULL);
 }
 
 ////the function get label and type and insert it to the symbols table

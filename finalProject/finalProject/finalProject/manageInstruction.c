@@ -312,7 +312,7 @@ void f_manamgeInstruction(char* row, char* isLabel)
 	// if has- send to function:insertlabel
 	if (isLabel != NULL)
 	{
-		f_insertLabel(isLabel, instruction, newNode->address);
+		f_insertLabel(isLabel, instruction,local, newNode->address);
 		//put the label in the node instruction struct
 		newNode->label = isLabel;
 		//row point after ther label

@@ -17,7 +17,6 @@ int main(int argc,char **argv)
 		{
 			perror("canot open the input file");
 		}
-	
 
 		//f_assembleFirstPass(inputFile,listData,listInstrucion);
 		//allocate hashForSymbol(n)
