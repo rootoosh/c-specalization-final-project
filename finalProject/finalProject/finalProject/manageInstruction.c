@@ -3,7 +3,7 @@
 #include <string.h>
 #include "commandsData.h"
 #include "symbolsHash.h"
-#include "structures.h"
+#include "manageInstruction.h"
 
 extern int IC;
 //get string and check is it register or label operand. in the nameOp put the name nice with \n
@@ -170,9 +170,6 @@ void f_manageInstandResidence(char* row, S_nodeInstruction* node, int serialOper
 
 	//new node for the number
 	struct nodeI* newNode = f_insertInstruction();
-	//in order to know in the next pass where to put the nodes of the operand-
-	//we here put 'm' as sign that this is a number and the operand shuld be after him
-	//במעבר הבא נצטרך לדעת לדלג צומת אחד לפני הכנסת צומת האופרנד השני, לכן ציינו כאן באות מיוחדת
 	newNode->state = 'a';
 	node->next = newNode;
 	newNode->binaryCode = 1;

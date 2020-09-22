@@ -13,7 +13,6 @@ void f_putBinaryCode(int numCommand, S_nodeInstruction* node, int lastIndex);
 
 //find # mean Instant residence method
 void f_manageInstandResidence(char* row, S_nodeInstruction* node, int serialOperand);
-
 void f_putLabelInNode(char* label, S_nodeInstruction* node, int serialOperand);
 void f_manageRelativeResidence(char* row, S_nodeInstruction* newNode);
 

@@ -5,18 +5,6 @@
 typedef enum { local, entry, external } E_scopeLabel;
 typedef enum { data, instruction }E_typeLabel;
 
-//struct of binary code machine or data
-//this is the requested output
-//for the .ob file
-//typedef struct binaryCode
-//{
-//	unsigned char destRegister : 3;
-//	unsigned char destResident : 3;
-//	unsigned char sourceRegister : 3;
-//	unsigned char sourecResident : 3;
-//	unsigned char command : 4;
-//	//total: 16 bits
-//}S_binaryCodeMachineOrData;
 
 //struct represent node in instruction list
 typedef struct nodeI
@@ -26,7 +14,6 @@ typedef struct nodeI
 	char command[3];
 	char* firstOperand;
 	char* secondOperand;
-	/*S_binaryCodeMachineOrData binaryCode;*/
 	unsigned int binaryCode : 16;
 	char state;
 	struct nodeI* next;
@@ -42,7 +29,6 @@ typedef struct nodeD
 	//represent the content data in binary
 	//should be node for every piece of data
 	unsigned int binaryCode : 16;
-	/*S_binaryCodeMachineOrData binaryCode;*/
 	struct nodeD* next;
 }S_nodeData;
 
@@ -69,13 +55,13 @@ typedef struct symbol
 
 
 //prototype of helpers function for all sulotion-helpers.c
-char* f_ingnoreSpaces(char* string);
+ char* f_ingnoreSpaces(char* string);
 
 //prototype of initilize function-structures.c
-S_nodeData* f_insertDirective();
-struct nodeI* f_insertInstruction();
+ S_nodeData* f_insertDirective();
+ S_nodeInstruction* f_insertInstruction();
 
-void freeList();
+ void freeList();
 
 typedef struct
 {

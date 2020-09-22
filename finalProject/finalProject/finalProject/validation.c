@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include "validation.h"
 #include "commandsData.h"
 #include "structures.h"
 
 
-int  hasError = 0;
 int f_checkIsValidCommand(char* row, int numRow)
 {
 	int isValidComand;
@@ -79,7 +79,6 @@ int f_checkIsValidDataNumbers(char* row, int numRow)
 		return 0;
 	}
 	else {
-
 		printf("Error!, in row %d, not valid data of directive statment", numRow);
 		return   0;
 	}

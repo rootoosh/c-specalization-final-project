@@ -1,3 +1,4 @@
+
 #include "structures.h"
 #include <stdio.h>
 //gloabel variables

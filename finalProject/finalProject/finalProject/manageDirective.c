@@ -4,6 +4,7 @@
 #include "manageDirective.h"
 #include "structures.h"
 #include "symbolsHash.h"
+#include "manageDirective.h"
 
 extern int DC;
 //initialize DataNode for .data directive
@@ -149,7 +150,7 @@ void f_manageDirective(char* row, char* isLabel)
 	// if has- send to function:insertlabel
 	if (isLabel != NULL)
 	{
-		f_insertLabel(isLabel, data,local,DC);
+		f_insertLabel(isLabel, data, local, DC);
 		//row point after ther label
 		row += strlen(isLabel) + 1;
 	}
@@ -163,12 +164,12 @@ void f_manageDirective(char* row, char* isLabel)
 	{
 		if ((*(row + 1) == 'x'))
 		{
-			f_modifyLabel(row,data, external);
+			f_modifyLabel(row, data, external);
 		}
 		// entry
 		else if (*(row + 1) == 'n')
 		{
-			f_modifyLabel(row,data, entry);
+			f_modifyLabel(row, data, entry);
 		}
 	}
 	else
@@ -198,6 +199,4 @@ void f_manageDirective(char* row, char* isLabel)
 		}
 
 	}
-
-
 }
